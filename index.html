@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  <header class="header" id="header">
+    <!-- Navbar -->
+    <nav class="nav">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a class="logo__link" href="#header">
+              <img class="logo__img" src="./img/logo.svg" alt="логотип Box Birds" />
+            </a>
+          </div>
+
+          <ul class="menu menu--desktop" data-menu-desktop>
+            <li class="menu__item" data-menu-item><a href="#about" class="menu__item-link active" data-scroll>О нас</a>
+            </li>
+            <li class="menu__item" data-menu-item><a href="#benefits" class="menu__item-link" data-scroll>Преимущества</a>
+            </li>
+            <li class="menu__item" data-menu-item><a href="#package" class="menu__item-link" data-scroll>Заявки</a></li>
+            <li class="menu__item" data-menu-item><a href="#reviews" class="menu__item-link" data-scroll>Отзывы</a></li>
+            <li class="menu__item" data-menu-item><a href="#faq" class="menu__item-link" data-scroll>Вопросы и ответы</a>
+            </li>
+          </ul>
+
+          <ul class="menu menu--mobile" data-menu-mobile>
+            <div class="languages languages--mobile" data-languages>
+              <div class="languages__selected">RU</div>
+              <ul class="languages__list">
+                <li class="languages__item selected" data-languages-item>RU</li>
+                <li class="languages__item" data-languages-item>EN</li>
+              </ul>
+            </div>
+
+            <ul class="submenu">
+              <li class="menu__item menu__item--line"></li>
+              <li class="menu__item" data-menu-item><a href="#about" class="menu__item-link active" data-scroll>О
+                  компании</a>
+              </li>
+              <li class="menu__item" data-menu-item><a href="#work" class="menu__item-link" data-scroll>Как мы
+                  работаем</a>
+              </li>
+              <li class="menu__item" data-menu-item><a href="#benefits" class="menu__item-link" data-scroll>Преимущества</a></li>
+              <li class="menu__item menu__item--line"></li>
+              <li class="menu__item" data-menu-item><a href="#package" class="menu__item-link" data-scroll>Активные
+                  заявки</a>
+              </li>
+              <li class="menu__item" data-menu-item><a href="#reviews" class="menu__item-link" data-scroll>Отзывы
+                  пользователей</a>
+              </li>
+              <li class="menu__item" data-menu-item><a href="#faq" class="menu__item-link" data-scroll>Вопросы</a></li>
+              <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Контакты</a></li>
+            </ul>
+            <a href="#" class="menu__item-link--registr" data-menu-item data-scroll data-open-modal data-modal-id="modal1">Зарегистрироваться</a>
+          </ul>
+
+          <div class="nav__right">
+            <div class="languages languages--desktop" data-languages>
+              <div class="languages__selected">RU</div>
+              <ul class="languages__list">
+                <li class="languages__item selected" data-languages-item>RU</li>
+                <li class="languages__item" data-languages-item>EN</li>
+              </ul>
+            </div>
+
+
+            <a class="enter" href="#" data-open-modal data-modal-id="modal1">Войти</a>
+          </div>
+          <div class="burger" data-burger>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Page -->
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__main">
+            <div class="hero__info">
+              <h1 class="hero__title">
+                перевози и отправляй
+                посылки по всему миру
+              </h1>
+
+              <p class="hero__descr">
+                Box Birds - мы поможем быстро и легко найти перевозчика или отправителя, и заработать на доставке!
+              </p>
+
+              <a class="hero__link" href="#" data-open-modal data-modal-id="modal1">УЗНАТЬ БОЛЬШЕ</a>
+            </div>
+
+            <div class="hero__cards">
+              <img class="hero__cards-img" src="./img/hero-cards.png" alt="отправители">
+            </div>
+          </div>
+
+          <form action="#" class="hero__sending sending">
+            <div class="sending__inner">
+              <div class="sending__departure" data-departure>
+                <select name="sending" id="sending" class="sending__departure-list">
+                  <option selected="selected" class="sending__departure-item active">Отправить</option>
+                  <option class="sending__departure-item">Перевезти</option>
+                </select>
+                <img src="./img/arrow-down.svg" alt="arrow">
+              </div>
+
+              <div class="sending__cities">
+                <div class="sending__city">
+                  <input class="sending__city-input" type="text" placeholder="Откуда">
+                </div>
+
+                <div class="sending__city">
+                  <input class="sending__city-input" type="text" placeholder="Куда">
+                </div>
+              </div>
+
+              <div class="sending__datapicker">
+                <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000">
+              </div>
+
+
+              <button type="button" class="sending__btn" data-open-modal data-modal-id="modal1">Найти</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="about__title title">
+          О нас
+        </h2>
+
+        <p class="about__descr">
+          Наша платформа позволяет пользователям удобно отправлять и получать посылки через границы, а также дает
+          возможность зарабатывать деньги с помощью нашей уникальной системы доставки
+        </p>
+      </div>
+    </section>
+    <section class="work" id="work">
+      <div class="container">
+        <div class="work__inner">
+          <h3 class="work__title title">
+            Как мы работаем?
+          </h3>
+
+          <ul class="work__list">
+            <li class="work__item">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/work/registration-mobile.png" />
+                <img class="work__item-img" src="./img/work/registration.png" alt="Регистрация">
+              </picture>
+
+              <p class="work__item-descr" data-open-modal data-modal-id="modal1" style="cursor: pointer;">
+                Регистрация
+              </p>
+
+              <p class="work__item-count">1</p>
+            </li>
+
+            <li class="work__item work__item--hidden"></li>
+
+            <li class="work__item work__item--hidden"></li>
+            <li class="work__item">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/work/application-mobile.png" />
+                <img class="work__item-img" src="./img/work/application.png" alt="Поиск/создание заявки">
+              </picture>
+
+              <p class="work__item-descr">
+                Поиск/создание заявки
+              </p>
+
+              <p class="work__item-count">2</p>
+            </li>
+
+            <li class="work__item">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/work/worldwide-shipping-mobile.png" />
+                <img class="work__item-img" src="./img/work/worldwide-shipping.png" alt="Отправление/Доставка">
+              </picture>
+
+              <p class="work__item-descr">
+                Отправление/Доставка
+              </p>
+
+              <p class="work__item-count">3</p>
+            </li>
+
+            <li class="work__item work__item--hidden"></li>
+
+            <li class="work__item work__item--hidden"></li>
+            <li class="work__item">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/work/payment-method-mobile.png" />
+                <img class="work__item-img" src="./img/work/payment-method.png" alt="Оплата">
+              </picture>
+
+              <p class="work__item-descr">
+                Оплата
+              </p>
+
+              <p class="work__item-count">4</p>
+            </li>
+
+            <li class="work__item">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/work/package-delivered-mobile.png" />
+                <img class="work__item-img" src="./img/work/package-delivered.png" alt="Посылка доставлена">
+              </picture>
+
+              <p class="work__item-descr">
+                Посылка доставлена
+              </p>
+
+              <p class="work__item-count">5</p>
+            </li>
+
+            <li class="work__item work__item--hidden"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="benefits" id="benefits">
+      <div class="container">
+        <div class="benefits__inner">
+          <h3 class="benefits__title title">
+            Преимущества
+          </h3>
+
+          <ul class="benefits__list">
+            <li class="benefits__item bg-black">
+              <h4 class="benefits__item-title">
+                Быстрая<br> доставка по<br> всему миру
+              </h4>
+
+              <p class="benefits__item-descr">
+                Самая быстрая доставка
+                из рук в руки в любую точку мира
+              </p>
+
+              <img class="benefits__item-bg" src="./img/benefits/benefits-1.png " alt="">
+            </li>
+
+            <li class="benefits__item bg-grey">
+              <h4 class="benefits__item-title">
+                Только верифицированные пользователи
+              </h4>
+
+              <p class="benefits__item-descr">
+                Мы верифицируем всех наших пользователей запрашивая документ, удостоверяющий личность
+              </p>
+
+              <img class="benefits__item-bg" src="./img/benefits/benefits-2.png " alt="">
+            </li>
+
+            <li class="benefits__item bg-blue">
+              <h4 class="benefits__item-title">
+                Оплата в<br> два клика
+              </h4>
+
+              <p class="benefits__item-descr">
+                Оплатить пересылку или получить деньги за доставку можно с любой карты
+              </p>
+
+              <img class="benefits__item-bg" src="./img/benefits/benefits-3.png " alt="">
+            </li>
+
+            <li class="benefits__item bg-white">
+              <h4 class="benefits__item-title">
+                Просто в использовании
+              </h4>
+
+              <p class="benefits__item-descr">
+                Возьми с собой посылку и заработай или отправь свою быстро и безопасно
+              </p>
+
+              <img class="benefits__item-bg" src="./img/benefits/benefits-4.png " alt="">
+            </li>
+
+            <li class="benefits__item bg-white">
+              <h4 class="benefits__item-title">
+                Комфортная<br> цена
+              </h4>
+
+              <p class="benefits__item-descr">
+                Установи цену за отправление или договорись с перевозчиком самостоятельно
+              </p>
+
+              <img class="benefits__item-bg" src="./img/benefits/benefits-5.png " alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="package" id="package">
+      <div class="container">
+        <h3 class="package__title title">
+          Возьми посылку прямо сейчас
+        </h3>
+
+        <p class="package__descr">
+          Захвати посылку и заработай на своем путешествии или найди подходящего перевозчика по нужному тебе направлению
+        </p>
+
+        <form action="#" class="package__sending sending">
+          <div class="sending__inner">
+            <div class="sending__departure" data-departure>
+              <!-- <div class="sending__departure-select">
+            Отправить
+
+            <img src="./img/arrow-down.svg" alt="arrow">
+          </div> -->
+
+
+              <!-- 
+          <ul class="sending__departure-list" data-departure-list>
+            <li class="sending__departure-item active" data-departure-item>Отправить</li>
+            <li class="sending__departure-item" data-departure-item>Перевезти</li>
+          </ul> -->
+
+              <select name="sending" id="sending-2" class="sending__departure-list">
+                <option selected="selected" class="sending__departure-item active">Отправить</option>
+                <option class="sending__departure-item">Перевезти</option>
+              </select>
+              <img src="./img/arrow-down.svg" alt="arrow">
+            </div>
+
+            <div class="sending__cities">
+              <div class="sending__city">
+                <input class="sending__city-input" type="text" placeholder="Откуда">
+              </div>
+
+              <div class="sending__city">
+                <input class="sending__city-input" type="text" placeholder="Куда">
+              </div>
+            </div>
+
+            <div class="sending__datapicker">
+              <input class="sending__datapicker-input" type="text" id="datepicker-2" placeholder="00.00.0000">
+            </div>
+
+            <button type="button" class="sending__btn" data-open-modal data-modal-id="modal1">Найти</button>
+          </div>
+        </form>
+
+        <ul class="package__cards-list">
+          <li>
+            <ul class="package__cards">
+              <li class="package__card">
+                <div class="package__card-top">
+                  <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+                  <div class="package__card-info">
+                    <h4 class="package__card-title">
+                      София
+
+                      <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z" fill="#FFE600" />
+                        </svg>
+
+                        4.8
+                      </span>
+                    </h4>
+
+                    <div class="package__card-sending">
+                      Уже доставила: 142 посылки
+                    </div>
+                  </div>
+                </div>
+
+                <div class="package__card-middle">
+                  <div class="package__card-group">
+                    <p class="package__card-label">Маршрут:</p>
+
+                    <div class="package__card-detail">
+                      <p>Москва</p>
+                      <img src="./img/arrow-right.svg" alt="arrow">
+                      <p>Рим</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Дата:</p>
+
+                    <div class="package__card-detail">
+                      <p>23.04.2023</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Тип посылки:</p>
+
+                    <div class="package__card-detail">
+                      <p>Портфель 5 кг</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+              </li>
+
+              <li class="package__card">
+                <div class="package__card-top">
+                  <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+                  <div class="package__card-info">
+                    <h4 class="package__card-title">
+                      София
+
+                      <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z" fill="#FFE600" />
+                        </svg>
+
+                        4.8
+                      </span>
+                    </h4>
+
+                    <div class="package__card-sending">
+                      Уже доставила: 142 посылки
+                    </div>
+                  </div>
+                </div>
+
+                <div class="package__card-middle">
+                  <div class="package__card-group">
+                    <p class="package__card-label">Маршрут:</p>
+
+                    <div class="package__card-detail">
+                      <p>Москва</p>
+                      <img src="./img/arrow-right.svg" alt="arrow">
+                      <p>Рим</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Дата:</p>
+
+                    <div class="package__card-detail">
+                      <p>23.04.2023</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Тип посылки:</p>
+
+                    <div class="package__card-detail">
+                      <p>Портфель 5 кг</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="package__cards">
+              <li class="package__card">
+                <div class="package__card-top">
+                  <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+                  <div class="package__card-info">
+                    <h4 class="package__card-title">
+                      София
+
+                      <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z" fill="#FFE600" />
+                        </svg>
+
+                        4.8
+                      </span>
+                    </h4>
+
+                    <div class="package__card-sending">
+                      Уже доставила: 142 посылки
+                    </div>
+                  </div>
+                </div>
+
+                <div class="package__card-middle">
+                  <div class="package__card-group">
+                    <p class="package__card-label">Маршрут:</p>
+
+                    <div class="package__card-detail">
+                      <p>Москва</p>
+                      <img src="./img/arrow-right.svg" alt="arrow">
+                      <p>Рим</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Дата:</p>
+
+                    <div class="package__card-detail">
+                      <p>23.04.2023</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Тип посылки:</p>
+
+                    <div class="package__card-detail">
+                      <p>Портфель 5 кг</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+              </li>
+
+              <li class="package__card">
+                <div class="package__card-top">
+                  <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+                  <div class="package__card-info">
+                    <h4 class="package__card-title">
+                      София
+
+                      <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z" fill="#FFE600" />
+                        </svg>
+
+                        4.8
+                      </span>
+                    </h4>
+
+                    <div class="package__card-sending">
+                      Уже доставила: 142 посылки
+                    </div>
+                  </div>
+                </div>
+
+                <div class="package__card-middle">
+                  <div class="package__card-group">
+                    <p class="package__card-label">Маршрут:</p>
+
+                    <div class="package__card-detail">
+                      <p>Москва</p>
+                      <img src="./img/arrow-right.svg" alt="arrow">
+                      <p>Рим</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Дата:</p>
+
+                    <div class="package__card-detail">
+                      <p>23.04.2023</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Тип посылки:</p>
+
+                    <div class="package__card-detail">
+                      <p>Портфель 5 кг</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="package__cards">
+              <li class="package__card">
+                <div class="package__card-top">
+                  <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+                  <div class="package__card-info">
+                    <h4 class="package__card-title">
+                      София
+
+                      <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z" fill="#FFE600" />
+                        </svg>
+
+                        4.8
+                      </span>
+                    </h4>
+
+                    <div class="package__card-sending">
+                      Уже доставила: 142 посылки
+                    </div>
+                  </div>
+                </div>
+
+                <div class="package__card-middle">
+                  <div class="package__card-group">
+                    <p class="package__card-label">Маршрут:</p>
+
+                    <div class="package__card-detail">
+                      <p>Москва</p>
+                      <img src="./img/arrow-right.svg" alt="arrow">
+                      <p>Рим</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Дата:</p>
+
+                    <div class="package__card-detail">
+                      <p>23.04.2023</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Тип посылки:</p>
+
+                    <div class="package__card-detail">
+                      <p>Портфель 5 кг</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+              </li>
+
+              <li class="package__card">
+                <div class="package__card-top">
+                  <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+                  <div class="package__card-info">
+                    <h4 class="package__card-title">
+                      София
+
+                      <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z" fill="#FFE600" />
+                        </svg>
+
+                        4.8
+                      </span>
+                    </h4>
+
+                    <div class="package__card-sending">
+                      Уже доставила: 142 посылки
+                    </div>
+                  </div>
+                </div>
+
+                <div class="package__card-middle">
+                  <div class="package__card-group">
+                    <p class="package__card-label">Маршрут:</p>
+
+                    <div class="package__card-detail">
+                      <p>Москва</p>
+                      <img src="./img/arrow-right.svg" alt="arrow">
+                      <p>Рим</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Дата:</p>
+
+                    <div class="package__card-detail">
+                      <p>23.04.2023</p>
+                    </div>
+                  </div>
+                  <div class="package__card-group">
+                    <p class="package__card-label">Тип посылки:</p>
+
+                    <div class="package__card-detail">
+                      <p>Портфель 5 кг</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+              </li>
+
+              <li class="package__cards-more">
+                <a class="package__cards-more-link" href="#" data-open-modal data-modal-id="modal1">Просмотреть еще</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="reviews__inner">
+          <h3 class="reviews__title title">
+            Отзывы
+          </h3>
+
+          <div class="reviews__slider">
+            <div class="reviews__slider-container swiper mySwiper">
+              <div class="reviews__slider-wrapper swiper-wrapper">
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <img class="reviews__slide-pic" src="./img/reviews-pic.jpg" alt="София Отправитель">
+                    <div class="reviews__slide-info">
+                      <h4 class="reviews__slide-name">
+                        София
+                      </h4>
+
+                      <p class="reviews__slide-position">
+                        Отправитель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <P>
+                      Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                      aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                      himenaeos ad litora torquent
+                      <span class="reviews__slide-more" style="display: none;" data-more-text>
+                        per Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent
+                        per
+                        conubia nostra, per inceptos himenaeos ad litora torquent per
+                      </span>
+                    </P>
+
+                    <button class="reviews__slide-btn" data-more-btn>Читать целиком</button>
+                  </div>
+                </div>
+
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <img class="reviews__slide-pic" src="./img/reviews-pic.jpg" alt="София Отправитель">
+                    <div class="reviews__slide-info">
+                      <h4 class="reviews__slide-name">
+                        София
+                      </h4>
+
+                      <p class="reviews__slide-position">
+                        Отправитель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <P>
+                      Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                      aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                      himenaeos ad litora torquent
+                      <span class="reviews__slide-more" style="display: none;" data-more-text>
+                        per Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent
+                        per
+                        conubia nostra, per inceptos himenaeos ad litora torquent per
+                      </span>
+                    </P>
+
+                    <button class="reviews__slide-btn" data-more-btn>Читать целиком</button>
+                  </div>
+                </div>
+
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <img class="reviews__slide-pic" src="./img/reviews-pic.jpg" alt="София Отправитель">
+                    <div class="reviews__slide-info">
+                      <h4 class="reviews__slide-name">
+                        София
+                      </h4>
+
+                      <p class="reviews__slide-position">
+                        Отправитель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <P>
+                      Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                      aliquet odio mattis.
+                      <span class="reviews__slide-more" style="display: none;" data-more-text>
+                        per Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent
+                        per
+                        conubia nostra, per inceptos himenaeos ad litora torquent per
+                      </span>
+                    </P>
+
+                    <button class="reviews__slide-btn" data-more-btn>Читать целиком</button>
+                  </div>
+                </div>
+
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <img class="reviews__slide-pic" src="./img/reviews-pic.jpg" alt="София Отправитель">
+                    <div class="reviews__slide-info">
+                      <h4 class="reviews__slide-name">
+                        София
+                      </h4>
+
+                      <p class="reviews__slide-position">
+                        Отправитель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <P>
+                      Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                      aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                      himenaeos ad litora torquent
+                      Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                      aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                      himenaeos ad litora torquent
+                      <span class="reviews__slide-more" style="display: none;" data-more-text>
+                        per Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent
+                        per
+                        conubia nostra, per inceptos himenaeos ad litora torquent per
+                      </span>
+                    </P>
+
+                    <button class="reviews__slide-btn" data-more-btn>Читать целиком</button>
+                  </div>
+                </div>
+
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <img class="reviews__slide-pic" src="./img/reviews-pic.jpg" alt="София Отправитель">
+                    <div class="reviews__slide-info">
+                      <h4 class="reviews__slide-name">
+                        София
+                      </h4>
+
+                      <p class="reviews__slide-position">
+                        Отправитель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <P>
+                      Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                      aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                      himenaeos ad litora torquent
+                      <span class="reviews__slide-more" style="display: none;" data-more-text>
+                        per Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent
+                        per
+                        conubia nostra, per inceptos himenaeos ad litora torquent per
+                      </span>
+                    </P>
+
+                    <button class="reviews__slide-btn" data-more-btn>Читать целиком</button>
+                  </div>
+                </div>
+
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <img class="reviews__slide-pic" src="./img/reviews-pic.jpg" alt="София Отправитель">
+                    <div class="reviews__slide-info">
+                      <h4 class="reviews__slide-name">
+                        София
+                      </h4>
+
+                      <p class="reviews__slide-position">
+                        Отправитель
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <P>
+                      Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                      aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                      himenaeos ad litora torquent
+                      <span class="reviews__slide-more" style="display: none;" data-more-text>
+                        per Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent
+                        per
+                        conubia nostra, per inceptos himenaeos ad litora torquent per
+                      </span>
+                    </P>
+
+                    <button class="reviews__slide-btn" data-more-btn>Читать целиком</button>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-controls">
+                <div class="reviews__slider-prev">
+                  <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56 39.5C56.8284 39.5 57.5 38.8284 57.5 38C57.5 37.1716 56.8284 36.5 56 36.5L56 39.5ZM17.9393 36.9393C17.3536 37.5251 17.3536 38.4749 17.9393 39.0607L27.4853 48.6066C28.0711 49.1924 29.0208 49.1924 29.6066 48.6066C30.1924 48.0208 30.1924 47.0711 29.6066 46.4853L21.1213 38L29.6066 29.5147C30.1924 28.9289 30.1924 27.9792 29.6066 27.3934C29.0208 26.8076 28.0711 26.8076 27.4853 27.3934L17.9393 36.9393ZM56 36.5L19 36.5L19 39.5L56 39.5L56 36.5Z" fill="#1B4CFB" />
+                    <rect x="0.5" y="0.5" width="74" height="74" rx="37" stroke="#96A1C5" />
+                  </svg>
+                </div>
+
+                <div class="reviews__slider-pagination swiper-pagination"></div>
+
+                <div class="reviews__slider-next">
+                  <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.0002 36.5C18.1718 36.5 17.5002 37.1716 17.5002 38C17.5002 38.8284 18.1718 39.5 19.0002 39.5V36.5ZM57.0609 39.0607C57.6467 38.4749 57.6467 37.5251 57.0609 36.9393L47.515 27.3934C46.9292 26.8076 45.9794 26.8076 45.3936 27.3934C44.8079 27.9792 44.8079 28.9289 45.3936 29.5147L53.8789 38L45.3936 46.4853C44.8079 47.0711 44.8079 48.0208 45.3936 48.6066C45.9794 49.1924 46.9292 49.1924 47.515 48.6066L57.0609 39.0607ZM19.0002 39.5H56.0002V36.5H19.0002V39.5Z" fill="#1B4CFB" />
+                    <rect x="0.5" y="0.5" width="74" height="74" rx="37" stroke="#96A1C5" />
+                  </svg>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="faq__inner">
+          <h3 class="faq__title title">
+            Часто задаваемые вопросы
+          </h3>
+          <div class="faq__accordion accordion">
+            <div class="accordion__item" data-accordion-item>
+              <div class="accordion__header">Что такое BOXBIRDS?</div>
+              <div class="accordion__content">
+                <ol>
+                  <li>Зарегистрируйтесь и пройдите верификацию
+                  </li>
+                  <li>Укажите направление и выберите подходящего перевозчика</li>
+                  <li> Оплатите посылку и получите контакты перевозчика</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="accordion__item" data-accordion-item>
+              <div class="accordion__header">Почему мы?</div>
+              <div class="accordion__content">
+                <p>Почему</p>
+                <p>Почему</p>
+                <p>Почему</p>
+              </div>
+            </div>
+
+            <div class="accordion__item" data-accordion-item>
+              <div class="accordion__header">Как отправить посылку?</div>
+              <div class="accordion__content">Содержимое раздела 3</div>
+            </div>
+
+            <div class="accordion__item" data-accordion-item>
+              <div class="accordion__header">Как доставить посылку?</div>
+              <div class="accordion__content">Содержимое раздела 1</div>
+            </div>
+
+            <div class="accordion__item" data-accordion-item>
+              <div class="accordion__header">Сколько это стоит?</div>
+              <div class="accordion__content">Содержимое раздела 2</div>
+            </div>
+
+            <div class="accordion__item" data-accordion-item>
+              <div class="accordion__header">Как оплатить посылку?</div>
+              <div class="accordion__content">Содержимое раздела 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+
+    <!-- Осталось еще чуть-чуть... -->
+    <button class="open-modal-btn" data-open-modal data-modal-id="modal1" style="display: none;">Open Modal 1</button>
+    <div class="modal" id="modal1" data-modal>
+      <div class="modal__content">
+        <form class="modal__form" action="#">
+          <h2>Осталось еще чуть-чуть...</h2>
+          <p>Оставь свою почту и мы отправим тебе приглашение, как только все запустим. Стань первопроходцем!</p>
+
+          <div class="modal__form-group form-group">
+            <input class="modal__form-input form-input" type="email" placeholder="Введите email" required="">
+            <label for="input" class="modal__form-label form-label">Введите email</label>
+          </div>
+
+          <div class="modal__form-btns">
+            <button type="button" class="modal__form-btn form-btn">Хочу зарабатывать!</button>
+            <button type="button" class="modal__form-btn form-btn">Хочу отправлять!</button>
+          </div>
+
+          <div class="modal__form-decor"></div>
+          <div class="modal__form-decorr"></div>
+        </form>
+
+        <button class="modal__close-btn" data-modal-close><img src="./img/modal-close.svg" alt="Закрыть модальное окно"></button>
+      </div>
+    </div>
+
+
+    <!-- Вход в личный кабинет  -->
+    <button class="open-modal-btn" data-open-modal data-modal-id="modal2" style="display: none;">Open Modal 2</button>
+    <div class="modal" id="modal2" data-modal>
+      <div class="modal__content">
+        <form class="modal__form sign-form" action="#">
+          <div class="sign-form__top">
+            <p class="sign-form__top-text">
+              Еще нет аккаунта?
+            </p>
+
+            <a class="sign-form__top-link" href="#">Регистрация</a>
+          </div>
+
+          <div class="sign-form__inner">
+            <h2>Вход в личный кабинет </h2>
+
+            <div class="modal__form-group form-group">
+              <input class="modal__form-input form-input" type="text" placeholder="Логин" required="">
+              <label for="input" class="modal__form-label form-label">Логин</label>
+            </div>
+
+            <div class="modal__form-group form-group">
+              <input class="modal__form-input form-input" type="password" placeholder="Пароль" required="">
+              <label for="input" class="modal__form-label form-label">Пароль</label>
+              <button class="form-eye" type="button"><img src="./img/eye-close.svg" alt="не видно"></button>
+            </div>
+
+            <button type="button" class="sign-form__btn form-btn">Войти</button>
+
+            <div class="sign-form__apps">
+              <a class="sign-form__app" href="#">
+                <span>
+                  Войти через Apple
+                </span>
+
+                <img src="./img/app-apple.svg" alt="Войти через Apple">
+              </a>
+              <a class="sign-form__app" href="#">
+                <span>
+                  Войти через Google
+                </span>
+
+                <img src="./img/app-google.svg" alt="Войти через Google">
+              </a>
+            </div>
+
+            <a class="sign-form__footer-link" href="#">Забыли логин или пароль?</a>
+          </div>
+
+        </form>
+
+        <button class="modal__close-btn" data-modal-close><img src="./img/modal-close.svg" alt="Закрыть модальное окно"></button>
+      </div>
+    </div>
+
+    <!-- Регистрация -->
+
+    <button class="open-modal-btn" data-open-modal data-modal-id="modal3" style="display: none;">Open Modal 3</button>
+    <div class="modal" id="modal3" data-modal>
+      <div class="modal__content">
+        <form class="modal__form sign-form signup-form" action="#">
+          <div class="sign-form__top">
+            <p class="sign-form__top-text">
+              Уже есть аккаунт?
+            </p>
+
+            <a class="sign-form__top-link" href="#">Войти</a>
+          </div>
+
+          <div class="sign-form__inner">
+            <h2>Регистрация</h2>
+
+            <div class="modal__form-group form-group">
+              <input class="modal__form-input form-input" type="text" placeholder="Имя" required="">
+              <label for="input" class="modal__form-label form-label">Имя</label>
+
+
+
+
+
+
+
+
+              <!-- для ошибок -->
+              <div class="form-error" style="display: none;">*Error*</div>
+            </div>
+
+            <div class="modal__form-group form-group">
+              <input class="modal__form-input form-input" type="text" placeholder="Фамилия" required="">
+              <label for="input" class="modal__form-label form-label">Фамилия</label>
+            </div>
+
+            <div class="modal__form-group form-group">
+              <input class="modal__form-input form-input" type="email" placeholder="Email" required="">
+              <label for="input" class="modal__form-label form-label">Email</label>
+            </div>
+
+            <div class="modal__form-groups">
+              <div class="modal__form-group form-group">
+                <input class="modal__form-input form-input" type="password" placeholder="Пароль" required="">
+                <label for="input" class="modal__form-label form-label">Пароль</label>
+                <button class="form-eye" type="button"><img src="./img/eye-close.svg" alt="не видно"></button>
+              </div>
+
+              <div class="modal__form-group form-group">
+                <input class="modal__form-input form-input" type="password" placeholder="Повторите пароль" required="">
+                <label for="input" class="modal__form-label form-label">Повторите пароль</label>
+                <button class="form-eye" type="button"><img src="./img/eye-close.svg" alt="не видно"></button>
+              </div>
+            </div>
+
+            <input class="modal__form-checkbox" type="checkbox" id="form-checkbox">
+
+            <label class="modal__form-checkbox-label" for="form-checkbox">
+              <div class="modal__form-checkbox-decor">
+
+              </div>
+
+              <div class="modal__form-checkbox-text">
+                Я принимаю
+                <a class="modal__form-checkbox-link" href="#"> Пользовательское соглашение</a>
+                и
+                <a class="modal__form-checkbox-link" href="#">Политику конфиденциальности</a>
+              </div>
+            </label>
+
+            <button type="button" class="sign-form__btn form-btn" disabled>Зарегистрироваться</button>
+
+            <a class="sign-form__footer-link" href="#">или</a>
+
+            <div class="sign-form__apps">
+              <a class="sign-form__app" href="#">
+                <span>
+                  Войти через Apple
+                </span>
+
+                <img src="./img/app-apple.svg" alt="Войти через Apple">
+              </a>
+              <a class="sign-form__app" href="#">
+                <span>
+                  Войти через Google
+                </span>
+
+                <img src="./img/app-google.svg" alt="Войти через Google">
+              </a>
+            </div>
+
+
+          </div>
+
+        </form>
+
+        <button class="modal__close-btn" data-modal-close><img src="./img/modal-close.svg" alt="Закрыть модальное окно"></button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__block">
+            <a class="footer__logo" href="#header">
+              <img class="footer__logo-img" src="./img/logo.svg" alt="logo BoxBirds">
+            </a>
+
+            <ul class="footer__socials">
+              <li class="footer__social">
+                <a class="footer__social-link" href="#">
+                  <img class="footer__social-img" src="./img/socials/telegram.svg" alt="telegram">
+                </a>
+              </li>
+
+              <li class="footer__social">
+                <a class="footer__social-link" href="#">
+                  <img class="footer__social-img" src="./img/socials/whatsapp.svg" alt="whatsapp">
+                </a>
+              </li>
+
+              <li class="footer__social">
+                <a class="footer__social-link" href="#">
+                  <img class="footer__social-img" src="./img/socials/mail.svg" alt="mail">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <h4 class="footer__nav-title">О сервисе</h4>
+              </li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#about">О нас</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#work">Этапы работы</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#package">Активные заявки</a></li>
+            </ul>
+
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <h4 class="footer__nav-title">Дополнительная информация</h4>
+              </li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Верификация</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#faq">Частые вопросы</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#" data-open-modal data-modal-id="modal1">Запрещенные предметы</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#" data-open-modal data-modal-id="modal1">Правовая документация</a></li>
+            </ul>
+
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <h4 class="footer__nav-title">Написать нам</h4>
+              </li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="mailto:info@mail.ru">info@mail.ru</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__politicals">
+            <a class="footer__political" href="#" data-open-modal data-modal-id="modal1">
+              Политика конфедициальности
+            </a>
+
+            <a class="footer__political" href="#" data-open-modal data-modal-id="modal1">
+              Соглашение на обработку персональных данных
+            </a>
+          </div>
+
+          <div class="footer__copys">
+            <p class="footer__copy">
+              Все права защищены
+            </p>
+
+            <p class="footer__copy">
+              BoxBirds
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>
