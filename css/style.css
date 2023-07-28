@@ -545,6 +545,9 @@ body {
   -webkit-box-shadow: 0px 3px 12px var(--border);
           box-shadow: 0px 3px 12px var(--border);
   border-radius: 14px;
+  border: 1px solid var(--1-b-4-cfb, #1B4CFB);
+  background: var(--f-9-f-9-ff, #F9F9FF);
+  box-shadow: 0px 3px 12px 0px #E1E8FF;
 }
 
 .menu {
@@ -1802,6 +1805,10 @@ body {
   width: 168px;
   height: 48px;
   border-radius: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--1-b-4-cfb, #1B4CFB);
+  background: var(--f-9-f-9-ff, #F9F9FF);
+  box-shadow: 0px 3px 12px 0px #E1E8FF;
 }
 
 .footer__socials {
@@ -2704,6 +2711,10 @@ p.sign-form__top-text {
     position: absolute;
     top: 30px;
     left: 0;
+    border-radius: 14px;
+    border: 1px solid var(--1-b-4-cfb, #1B4CFB);
+    background: var(--f-9-f-9-ff, #F9F9FF);
+    box-shadow: 0px 3px 12px 0px #E1E8FF;
   }
 
   .modal {
@@ -2872,13 +2883,9 @@ p.sign-form__top-text {
   }
 
   .logo__link {
-    width: auto;
-    min-width: auto;
-    height: auto;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    border: 0;
+    min-width: 139px;
+    width: 139px;
+    height: 38px;
   }
 
   .hero {

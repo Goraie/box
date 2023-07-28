@@ -1,61 +1,5 @@
 $(document).ready(function () {
 
-  $(".tabs_menu-slick").slick({
-    arrows: false,
-    slidesToShow: 2.5,
-    infinite: false,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2.5,
-        }
-      },
-      {
-        breakpoint: 300,
-        settings: {
-          slidesToShow: 1.5,
-        }
-      }
-    ]
-  });
-
-  $(".box_birds_search_header_box_item_burger").click(function () {
-    $(".box_birds_search_header_box.mobile").toggleClass('fixed');
-    $(".box_birds_search_header_box_menu").toggleClass('act');
-  });
-
-  $(".box_birds_search_header_box_menu .tabs_menu li").click(function () {
-    $(".box_birds_search_header_box_item_burger input").trigger('click');
-  });
-
-  $(".box_birds_search_application_title_departure").click(function () {
-    $(this).removeClass('act');
-    $('.box_birds_search_application_title_shipping').addClass('act');
-  });
-
-  $(".box_birds_search_application_title_shipping").click(function () {
-    $(this).removeClass('act');
-    $('.box_birds_search_application_title_departure').addClass('act');
-  });
-
-  $('.box_birds_profile_header_right_verification_input_item').keyup(function () {
-    if ($(this).parent().find('.box_birds_profile_header_prompt')) {
-      $(this).parent().find('.box_birds_profile_header_prompt').addClass('act');
-      setTimeout(() => {
-        $(this).parent().find('.box_birds_profile_header_prompt').fadeOut(400);
-      }, 6000);
-    }
-  });
-
-  $(".box_birds_search_application_item_status_btn").click(function () {
-    $(this).parent().find('.box_birds_search_application_item_status').css('display', 'none');
-    $(this).parent().find('.box_birds_search_application_item_status.finish').addClass('act');
-    $(this).parent().removeClass('active');
-    $(this).remove();
-  });
-
   var x, i, j, l, ll, selElmnt, a, b, c;
   /* Look for any elements with the class "custom-select": */
   x = document.getElementsByClassName("custom-select");
@@ -137,6 +81,108 @@ $(document).ready(function () {
   then close all select boxes: */
   document.addEventListener("click", closeAllSelect);
 
+  $(".select-main").click(function () {
+    $(this).toggleClass('act');
+    $(this).find('span').toggleClass('act');
+  });
+
+  $(".box_birds_profile_header_right_verification_input_box").hover(
+    function () {
+      $(this).find(".box_birds_profile_header_prompt").addClass('act');
+    }, function () {
+      setTimeout(() => {
+        $(".box_birds_profile_header_prompt").remove();
+      }, 2000);
+    }
+  );
+
+  $(".box_birds_search_first_card_product_box_item_courier_heart2").click(function () {
+    $(this).parent().parent().parent().parent().fadeOut(500);
+    setTimeout(() => {
+      $(this).parent().parent().parent().parent().remove();
+    }, 500);
+  });
+
+  $(".box_birds_search_application_button.balance").click(function () {
+    $(this).parent().find('.balance-history').find('.hide').toggleClass('act');
+  });
+
+  $(".box_birds_search_application_mobile-btns_item.deperture").click(function () {
+    $(".box_birds_search_application_mobile-content.deperture").removeClass('disbl');
+    $(".box_birds_search_application_mobile-content.shipping").addClass('disbl');
+  });
+
+  $(".box_birds_search_application_mobile-btns_item.shipping").click(function () {
+    $(".box_birds_search_application_mobile-content.shipping").removeClass('disbl');
+    $(".box_birds_search_application_mobile-content.deperture").addClass('disbl');
+  });
+
+  $(".box_birds_search_application_button").click(function () {
+    $(this).parent().find('.box_birds_search_application_mobile-content').find('.box_birds_search_application_mobile-content_item.hidden').toggleClass('act');
+  });
+
+  $(".box_birds_search_application_mobile-btns_item").click(function () {
+    $(this).parent().find('.box_birds_search_application_mobile-btns_item').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $(".tabs_menu-slick").slick({
+    arrows: false,
+    slidesToShow: 2.5,
+    infinite: false,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2.5,
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      }
+    ]
+  });
+
+  $(".box_birds_search_header_box_item_burger").click(function () {
+    $(".box_birds_search_header_box.mobile").toggleClass('fixed');
+    $(".box_birds_search_header_box_menu").toggleClass('act');
+  });
+
+  $(".box_birds_search_header_box_menu .tabs_menu li").click(function () {
+    $(".box_birds_search_header_box_item_burger input").trigger('click');
+  });
+
+  $(".box_birds_search_application_title_departure").click(function () {
+    $(this).removeClass('act');
+    $('.box_birds_search_application_title_shipping').addClass('act');
+  });
+
+  $(".box_birds_search_application_title_shipping").click(function () {
+    $(this).removeClass('act');
+    $('.box_birds_search_application_title_departure').addClass('act');
+  });
+
+  /*
+  $('.box_birds_profile_header_right_verification_input_item').keyup(function () {
+    if ($(this).parent().find('.box_birds_profile_header_prompt')) {
+      $(this).parent().find('.box_birds_profile_header_prompt').addClass('act');
+      setTimeout(() => {
+        $(this).parent().find('.box_birds_profile_header_prompt').fadeOut(400);
+      }, 6000);
+    }
+  });
+*/
+  $(".box_birds_search_application_item_status_btn").click(function () {
+    $(this).parent().find('.box_birds_search_application_item_status').css('display', 'none');
+    $(this).parent().find('.box_birds_search_application_item_status.finish').addClass('act');
+    $(this).parent().removeClass('active');
+    $(this).remove();
+  });
+
   $.fn.datepicker.dates['ru'] = {
     days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
     daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Вск"],
@@ -153,8 +199,16 @@ $(document).ready(function () {
       leftArrow: '<div class="datepicker-prev"> </div>',
       rightArrow: '<div class="datepicker-next"> </div>'
     },
-    language: 'ru'
+    language: 'ru',
+    autoclose: true
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $(".box_birds_search_first_content_header_form_date").datepicker('hide');
+    });
   });
+
+  $(".box_birds_search_first_content_header_form_date").datepicker('update', new Date());
+
 
   $(".box_birds_profile_header_right_verification_personal_info_input_date").datepicker({
     format: 'dd.mm.yy',
@@ -163,7 +217,13 @@ $(document).ready(function () {
       rightArrow: '<div class="datepicker-next"> </div>'
     },
     language: 'ru'
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $(".box_birds_profile_header_right_verification_personal_info_input_date").datepicker('hide');
+    });
   });
+
+  $(".box_birds_profile_header_right_verification_personal_info_input_date").datepicker('update', new Date());
 
   function highlightRangeDate(date) {
     var selectedDates = $('#date').datepicker('getDates');
@@ -183,7 +243,8 @@ $(document).ready(function () {
     format: 'dd.mm.yy',
     templates: {
       leftArrow: '<div class="datepicker-prev"> </div>',
-      rightArrow: '<div class="datepicker-next"> </div>'
+      rightArrow: '<div class="datepicker-next"> </div>',
+      footer: 'Test',
     },
     language: 'ru',
     beforeShowDay: highlightRangeDate,
@@ -194,8 +255,12 @@ $(document).ready(function () {
     if (dates.length > 2) dates = dates.splice(dates.length - 1);
     dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
     elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date").datepicker('hide');
+    });
   });
-
+  $("#date").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
 
   $('#date-tab3').datepicker({
     startView: 0,
@@ -218,7 +283,13 @@ $(document).ready(function () {
     if (dates.length > 2) dates = dates.splice(dates.length - 1);
     dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
     elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date-tab3").datepicker('hide');
+    });
   });
+
+  $("#date-tab3").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
 
   function highlightRange(date) {
     var selectedDates = $('#date-tab3').datepicker('getDates');
@@ -249,7 +320,13 @@ $(document).ready(function () {
     if (dates.length > 2) dates = dates.splice(dates.length - 1);
     dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
     elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date-tab4").datepicker('hide');
+    });
   });
+
+  $("#date-tab4").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
 
   function highlightRangeFavorite(date) {
     var selectedDates = $('#date-tab4').datepicker('getDates');
@@ -280,6 +357,10 @@ $(document).ready(function () {
     if (dates.length > 2) dates = dates.splice(dates.length - 1);
     dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
     elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date-balance-1").datepicker('hide');
+    });
   });
 
   function highlightRangeBalance(date) {
@@ -289,6 +370,8 @@ $(document).ready(function () {
     }
     return '';
   }
+
+  $("#date-balance-1").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
 
   $('#date-balance-2').datepicker({
     startView: 0,
@@ -311,7 +394,13 @@ $(document).ready(function () {
     if (dates.length > 2) dates = dates.splice(dates.length - 1);
     dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
     elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date-balance-2").datepicker('hide');
+    });
   });
+
+  $("#date-balance-2").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
 
   function highlightRangeBalanceSecond(date) {
     var selectedDates = $('#date-balance-2').datepicker('getDates');
@@ -342,7 +431,13 @@ $(document).ready(function () {
     if (dates.length > 2) dates = dates.splice(dates.length - 1);
     dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
     elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date-balance-3").datepicker('hide');
+    });
   });
+
+  $("#date-balance-3").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
 
   function highlightRangeBalanceThird(date) {
     var selectedDates = $('#date-balance-3').datepicker('getDates');
@@ -351,6 +446,44 @@ $(document).ready(function () {
     }
     return '';
   }
+
+  $('#date-balance-4').datepicker({
+    startView: 0,
+    minViewMode: 0,
+    maxViewMode: 2,
+    multidate: true,
+    multidateSeparator: "-",
+    autoClose: true,
+    format: 'dd.mm.yy',
+    templates: {
+      leftArrow: '<div class="datepicker-prev"> </div>',
+      rightArrow: '<div class="datepicker-next"> </div>'
+    },
+    language: 'ru',
+    beforeShowDay: highlightRangeBalanceFour,
+  }).on("changeDate", function (event) {
+    var dates = event.dates,
+      elem = $('#date-balance-4');
+    if (elem.data("selecteddates") == dates.join(",")) return;
+    if (dates.length > 2) dates = dates.splice(dates.length - 1);
+    dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
+    elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date-balance-4").datepicker('hide');
+    });
+  });
+
+  $("#date-balance-4").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
+
+  function highlightRangeBalanceFour(date) {
+    var selectedDates = $('#date-balance-4').datepicker('getDates');
+    if (selectedDates.length === 2 && date >= selectedDates[0] && date <= selectedDates[1]) {
+      return 'highlighted';
+    }
+    return '';
+  }
+
 
 
   /*
@@ -413,6 +546,10 @@ $(document).ready(function () {
   $('.tabs_menu-slick_item').click(function (e) {
     e.preventDefault();
     $('.tabs_menu-slick_item.active').removeClass('active');
+    $(".box_birds_search_application_mobile-btns_item").removeClass('active');
+    $(".box_birds_search_application_mobile-btns_item.deperture").addClass('active');
+    $(".box_birds_search_application_mobile-content.deperture").removeClass('disbl');
+    $(".box_birds_search_application_mobile-content.shipping").addClass('disbl');
     $(this).addClass('active');
     var tab = $(this).data('href');
     $('.tab').not(tab).css({
