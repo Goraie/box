@@ -86,6 +86,14 @@ $(document).ready(function () {
     $(this).find('span').toggleClass('act');
   });
 
+  $(".box_birds_search_application_balance .box_birds_search_application_title_departure").click(function(){
+    $(".box_birds_search_application_balance .box_birds_search_application_item .box_birds_search_application_item_departure").text('Перевозка');
+  });
+
+  $(".box_birds_search_application_balance .box_birds_search_application_title_shipping").click(function(){
+    $(".box_birds_search_application_balance .box_birds_search_application_item .box_birds_search_application_item_departure").text('Отправление');
+  });
+
   $(".box_birds_profile_header_right_verification_input_box").hover(
     function () {
       $(this).find(".box_birds_profile_header_prompt").addClass('act');
@@ -688,6 +696,8 @@ $(document).ready(function () {
     $('.box_birds_search_content_tab7').addClass('active');
     $('#tab7').css('display', 'block');
     $('#tab5').css('display', 'none');
+    $(".box_birds_search_content_tab5").css('display', 'none');
+    $(".verification-slick").addClass('disbl');
   })
 
   $('.box_birds_search_account_transactions_header_btn1').click(function () {

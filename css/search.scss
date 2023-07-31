@@ -65,6 +65,14 @@ img {
    max-width: 100%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   /* display: none; <- Crashes Chrome on hover */
+   -webkit-appearance: none;
+   margin: 0;
+   /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 .box_birds_search_header_box_menu {
    display: none;
    position: fixed;
@@ -511,7 +519,7 @@ img {
 }
 
 .tab {
-   width: 78%;
+   width: calc(80% - 20px);
 
    @media (max-width: 992px) {
       width: 100%;
@@ -665,6 +673,8 @@ img {
 }
 
 .box_birds_search_first_content_header_form_select_wrapper {
+   width: 165px;
+
    @media (max-width: 992px) {
       width: 100%;
    }
@@ -685,7 +695,7 @@ img {
 }
 
 .box_birds_search_first_content_header_form_input {
-   width: 214px;
+   width: 255px;
    height: 52px;
    background: #EDF0F8;
    border-radius: 10px;
@@ -740,6 +750,7 @@ img {
    border-radius: 10px;
    border: 0px;
    background-color: #F9F9FF !important;
+   box-shadow: 11px 19px 39px 0px rgba(211, 215, 227, 0.47);
 }
 
 .day,
@@ -867,6 +878,10 @@ img {
 
    &.active {
       display: flex;
+
+      @media (max-width: 992px) {
+         display: none;
+      }
    }
 }
 
@@ -1079,6 +1094,7 @@ img {
       color: #E1E8FF;
    }
 }
+
 
 .box_birds_search_first_instruction_balance {
    width: 161px;
@@ -1395,8 +1411,8 @@ img {
 
 .box_birds_search_first_card_product_box_item_courier {
    display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
+   justify-content: flex-start;
+   align-items: flex-end;
 }
 
 .box_birds_search_first_card_product_box_item_courier_face {
@@ -1408,6 +1424,7 @@ img {
 
 .box_birds_search_first_card_product_box_item_courier_content_box {
    width: 171px;
+   margin-left: 12px;
 }
 
 .box_birds_search_first_card_product_box_item_courier_name_heart {
@@ -1715,6 +1732,10 @@ img {
    }
 }
 
+.verification-slick.disbl {
+   display: none !important;
+}
+
 .box_birds_search_application_mobile {
    display: none;
 
@@ -1752,7 +1773,7 @@ img {
          background: #F9F9FF;
          box-shadow: 0px 3px 10px 0px #E1E8FF;
          margin-top: 20px;
-         padding: 15px 25px 25px 25px;
+         padding: 25px;
 
          &.hidden {
             display: none;
@@ -2827,7 +2848,8 @@ img {
 
 .box_birds_search_account_transactions_main_wrapper_item {
    box-shadow: 0px 3px 12px 0px #E1E8FF;
-   width: 68%;
+   width: calc(70% - 20px);
+   border-radius: 20px;
 
    @media (max-width: 992px) {
       width: 100%;
@@ -2880,6 +2902,7 @@ img {
 
    @media (max-width: 992px) {
       margin-top: 20px;
+      width: 100%;
    }
 }
 
@@ -3106,7 +3129,7 @@ img {
 }
 
 .box_birds_search_application_balance {
-   margin-top: 18px;
+   margin-top: 20px;
 
    .box_birds_search_application_item_status {
       background-color: #BDD8FD;
@@ -3595,6 +3618,11 @@ img {
    display: flex;
    align-items: center;
    margin-top: 40px;
+
+   @media (max-width: 992px) {
+      margin-top: 10px;
+   }
+
 }
 
 .box_birds_profile_header_right_verification_personal_info_input_label_icon {
