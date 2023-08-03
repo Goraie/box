@@ -516,6 +516,10 @@ input::-webkit-inner-spin-button {
 
 .box_birds_search_content_section {
    padding: 0 0 100px;
+
+   @media (max-width: 992px) {
+      padding: 0 0 54px;
+   }
 }
 
 .tab {
@@ -1105,6 +1109,13 @@ input::-webkit-inner-spin-button {
    top: 75px;
    padding: 15px 12px;
    z-index: 1;
+
+   &::before {
+      content: url('../img/arrow-4.svg');
+      position: absolute;
+      top: 161px;
+      left: -108px;
+   }
 }
 
 .box_birds_search_first_instruction_balance_title_box {
@@ -1357,7 +1368,7 @@ input::-webkit-inner-spin-button {
 
 .box_birds_search_first_instruction_qualification_arrow {
    position: absolute;
-   left: -179px;
+   left: -185px;
    top: -78px;
 }
 
@@ -1365,7 +1376,7 @@ input::-webkit-inner-spin-button {
    flex-wrap: wrap;
    align-items: flex-start;
    width: 100%;
-   box-shadow: 0px 3px 12px #E1E8FF;
+   // box-shadow: 0px 3px 12px #E1E8FF;
    border-radius: 14px;
    display: none;
    margin-top: 20px;
@@ -2315,6 +2326,10 @@ input::-webkit-inner-spin-button {
    margin-right: 56px;
    cursor: pointer;
    background: #E1E8FF;
+
+   @media (max-width: 992px) {
+      margin-right: 24px;
+   }
 }
 
 .box_birds_search_application_item_status {
@@ -2853,6 +2868,7 @@ input::-webkit-inner-spin-button {
 
    @media (max-width: 992px) {
       width: 100%;
+      box-shadow: none;
    }
 }
 
@@ -2868,6 +2884,7 @@ input::-webkit-inner-spin-button {
       background: #F9F9FF;
       box-shadow: 0px 3px 10px 0px #E1E8FF;
       padding: 5px 15px 15px 15px;
+      margin-top: 10px;
    }
 }
 
@@ -2966,9 +2983,21 @@ input::-webkit-inner-spin-button {
    color: #818895;
    font-size: 14px;
    font-weight: 500;
-   display: flex;
    align-items: center;
    margin-top: 10px;
+   display: none;
+
+   &.desc {
+      display: flex;
+   }
+
+   @media (max-width: 992px) {
+      display: flex;
+
+      &.desc {
+         display: none;
+      }
+   }
 
    span {
       width: 18px;
@@ -2978,6 +3007,19 @@ input::-webkit-inner-spin-button {
       align-items: center;
       border-radius: 3px;
       margin-left: 14px;
+   }
+}
+
+.small-text_mobile {
+   display: none;
+   margin-top: 30px;
+   color: #818895;
+   text-align: center;
+   font-size: 12px;
+   font-weight: 500;
+
+   @media (max-width: 992px) {
+      display: block;
    }
 }
 
@@ -2996,6 +3038,10 @@ input::-webkit-inner-spin-button {
    cursor: pointer;
    margin-top: 15px;
 
+   @media (max-width: 992px) {
+      margin-top: 60px;
+   }
+
    &:hover {
       transition-duration: .5s;
       background-color: #1B4CFB;
@@ -3009,6 +3055,10 @@ input::-webkit-inner-spin-button {
    font-weight: 500;
    line-height: 150%;
    margin-top: 8px;
+
+   @media (max-width: 992px) {
+      display: none;
+   }
 }
 
 .box_birds_search_account_transactions_main_wrapper {
@@ -3032,6 +3082,8 @@ input::-webkit-inner-spin-button {
 
    @media (max-width: 992px) {
       width: 100%;
+      height: auto;
+      padding-bottom: 70px;
    }
 
    &.active {
@@ -3039,7 +3091,32 @@ input::-webkit-inner-spin-button {
    }
 
    @media (max-width: 992px) {
-      margin: 20px auto 0 auto;
+      margin: 30px 30px 0 30px;
+   }
+}
+
+.balance-history_change {
+   margin-top: 30px;
+   padding: 0 42px;
+   display: none;
+
+   @media (max-width: 992px) {
+      display: flex;
+   }
+
+   div {
+      width: 50%;
+      font-size: 16px;
+      font-weight: 600;
+      color: #96A1C5;
+      text-align: center;
+      padding-bottom: 24px;
+      margin: 0 5px;
+
+      &.act {
+         border-bottom: 2px solid #1B4CFB;
+         color: #1B4CFB;
+      }
    }
 }
 
@@ -3047,11 +3124,13 @@ input::-webkit-inner-spin-button {
    display: none;
 
    @media (max-width: 992px) {
-      display: block;
+      &.act {
+         display: block;
+      }
    }
 
    &_title {
-      margin-top: 30px;
+      margin-top: 20px;
       color: #17161B;
       font-size: 16px;
       font-weight: 700;
@@ -3072,6 +3151,8 @@ input::-webkit-inner-spin-button {
 
    @media (max-width: 992px) {
       width: 100%;
+      height: auto;
+      padding-bottom: 70px;
    }
 
    &.active {
@@ -3079,7 +3160,7 @@ input::-webkit-inner-spin-button {
    }
 
    @media (max-width: 992px) {
-      margin: 20px auto 0 auto;
+      margin: 30px 30px 0 30px;
    }
 }
 
@@ -3102,12 +3183,30 @@ input::-webkit-inner-spin-button {
    color: #17161B;
    margin-top: 25px;
    margin-bottom: 10px;
+
+   @media (max-width: 992px) {
+      margin: 0px;
+   }
 }
 
 .box_birds_search_account_transactions_balance_transportation_amount {
    font-size: 24px;
    font-weight: 800;
    color: #17161B;
+   display: block;
+
+   &.mobile {
+      display: none;
+   }
+
+   @media (max-width: 992px) {
+      display: none;
+
+      &.mobile {
+         display: block;
+         margin-top: 11px;
+      }
+   }
 }
 
 .box_birds_search_account_transactions_balance_departure_amount_title {
@@ -3116,12 +3215,30 @@ input::-webkit-inner-spin-button {
    color: #17161B;
    margin-top: 55px;
    margin-bottom: 10px;
+
+   @media (max-width: 992px) {
+      margin: 0px;
+   }
 }
 
 .box_birds_search_account_transactions_balance_departure_amount {
    font-size: 24px;
    font-weight: 800;
    color: #17161B;
+   display: block;
+
+   &.mobile {
+      display: none;
+   }
+
+   @media (max-width: 992px) {
+      display: none;
+
+      &.mobile {
+         display: block;
+         margin-top: 45px;
+      }
+   }
 }
 
 .box_birds_search_application_tabs_wrap_balance {
@@ -3242,6 +3359,10 @@ input::-webkit-inner-spin-button {
    .box_birds_search_application_title_route,
    .box_birds_search_application_item_route_box {
       width: 185px;
+
+      @media (max-width: 992px) {
+         margin-left: 24px;
+      }
    }
 
    .box_birds_search_application_item_departure_icon {
@@ -3327,6 +3448,7 @@ input::-webkit-inner-spin-button {
 
    @media (max-width: 992px) {
       width: 100%;
+      padding: 0 20px;
    }
 }
 
@@ -3353,6 +3475,11 @@ input::-webkit-inner-spin-button {
    width: 100%;
    height: 48px;
    margin-top: 15px;
+
+   @media (max-width: 992px) {
+      margin-top: 0px;
+      background-color: #F9F9FF;
+   }
 }
 
 .box_birds_profile_header_right {
@@ -3367,6 +3494,10 @@ input::-webkit-inner-spin-button {
 .box_birds_profile_header_right_verification_wrap {
    display: flex;
    align-items: center;
+
+   @media (max-width: 992px) {
+      padding-left: 10px;
+   }
 }
 
 .box_birds_profile_header_right_verification_title {
@@ -3569,6 +3700,10 @@ input::-webkit-inner-spin-button {
    font-size: 16px;
    font-weight: 700;
    color: #17161B;
+
+   @media (max-width: 992px) {
+      margin-bottom: 20px;
+   }
 }
 
 .box_birds_profile_header_right_verification_personal_info {
@@ -3589,6 +3724,12 @@ input::-webkit-inner-spin-button {
    }
 }
 
+.box_birds_profile_header_right_verification_personal_info_input_box {
+   @media (max-width: 992px) {
+      margin-top: 16px;
+   }
+}
+
 .box_birds_profile_header_right_verification_personal_info_input {
    width: 290px;
    height: 48px;
@@ -3599,6 +3740,10 @@ input::-webkit-inner-spin-button {
    font-weight: 500;
    color: #17161B;
    margin-top: 10px;
+
+   @media (max-width: 992px) {
+      margin-top: 16px;
+   }
 
    &::placeholder {
       font-size: 16px;
@@ -3620,7 +3765,7 @@ input::-webkit-inner-spin-button {
    margin-top: 40px;
 
    @media (max-width: 992px) {
-      margin-top: 10px;
+      margin-top: 0px;
    }
 
 }
@@ -3713,6 +3858,10 @@ input::-webkit-inner-spin-button {
    height: 48px;
    margin-left: auto;
    margin-top: 35px;
+
+   @media (max-width: 992px) {
+      width: 100%;
+   }
 }
 
 .box_birds_profile_header_left_input__photo_loader {

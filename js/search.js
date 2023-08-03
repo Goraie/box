@@ -86,12 +86,14 @@ $(document).ready(function () {
     $(this).find('span').toggleClass('act');
   });
 
-  $(".box_birds_search_application_balance .box_birds_search_application_title_departure").click(function(){
+  $(".box_birds_search_application_balance .box_birds_search_application_title_departure").click(function () {
     $(".box_birds_search_application_balance .box_birds_search_application_item .box_birds_search_application_item_departure").text('Перевозка');
+    $(".box_birds_search_application_balance .box_birds_search_application_item .box_birds_search_application_item_departure_icon img").attr('src', 'img/shipping.svg');
   });
 
-  $(".box_birds_search_application_balance .box_birds_search_application_title_shipping").click(function(){
+  $(".box_birds_search_application_balance .box_birds_search_application_title_shipping").click(function () {
     $(".box_birds_search_application_balance .box_birds_search_application_item .box_birds_search_application_item_departure").text('Отправление');
+    $(".box_birds_search_application_balance .box_birds_search_application_item .box_birds_search_application_item_departure_icon img").attr('src', 'img/departure.svg');
   });
 
   $(".box_birds_profile_header_right_verification_input_box").hover(
@@ -104,7 +106,7 @@ $(document).ready(function () {
     }
   );
 
-  $(".box_birds_search_first_card_product_box_item_courier_heart2").click(function () {
+  $("#tab4 .box_birds_search_first_card_product_box_item_courier_heart2").click(function () {
     $(this).parent().parent().parent().parent().fadeOut(500);
     setTimeout(() => {
       $(this).parent().parent().parent().parent().remove();
@@ -491,6 +493,61 @@ $(document).ready(function () {
     }
     return '';
   }
+
+  $('#date-balance-5').datepicker({
+    startView: 0,
+    minViewMode: 0,
+    maxViewMode: 2,
+    multidate: true,
+    multidateSeparator: "-",
+    autoClose: true,
+    format: 'dd.mm.yy',
+    templates: {
+      leftArrow: '<div class="datepicker-prev"> </div>',
+      rightArrow: '<div class="datepicker-next"> </div>'
+    },
+    language: 'ru',
+    beforeShowDay: highlightRangeBalanceFive,
+  }).on("changeDate", function (event) {
+    var dates = event.dates,
+      elem = $('#date-balance-5');
+    if (elem.data("selecteddates") == dates.join(",")) return;
+    if (dates.length > 2) dates = dates.splice(dates.length - 1);
+    dates.sort(function (a, b) { return new Date(a).getTime() - new Date(b).getTime() });
+    elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $("#date-balance-5").datepicker('hide');
+    });
+  });
+
+  $("#date-balance-5").datepicker('setDates', [new Date(), new Date(Date.now() + 1000 * 60 * 60 * 24 * 2)]);
+
+  function highlightRangeBalanceFive(date) {
+    var selectedDates = $('#date-balance-5').datepicker('getDates');
+    if (selectedDates.length === 2 && date >= selectedDates[0] && date <= selectedDates[1]) {
+      return 'highlighted';
+    }
+    return '';
+  }
+
+
+  $(".balance-history_change .departure").click(function () {
+    $(".balance-history_change .shipping").removeClass('act');
+    $(this).addClass('act');
+
+    $(".balance-history.shipping").removeClass('act');
+    $(".balance-history.departure").addClass('act');
+  });
+
+  $(".balance-history_change .shipping").click(function () {
+    $(".balance-history_change .departure").removeClass('act');
+    $(this).addClass('act');
+
+    $(".balance-history.departure").removeClass('act');
+    $(".balance-history.shipping").addClass('act');
+  });
+
 
 
 

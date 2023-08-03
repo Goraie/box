@@ -475,6 +475,11 @@ input::-webkit-inner-spin-button {
 .box_birds_search_content_section {
   padding: 0 0 100px;
 }
+@media (max-width: 992px) {
+  .box_birds_search_content_section {
+    padding: 0 0 54px;
+  }
+}
 
 .tab {
   width: calc(80% - 20px);
@@ -1100,6 +1105,12 @@ input::-webkit-inner-spin-button {
   padding: 15px 12px;
   z-index: 1;
 }
+.box_birds_search_first_instruction_balance::before {
+  content: url("../img/arrow-4.svg");
+  position: absolute;
+  top: 161px;
+  left: -108px;
+}
 
 .box_birds_search_first_instruction_balance_title_box {
   display: flex;
@@ -1345,7 +1356,7 @@ input::-webkit-inner-spin-button {
 
 .box_birds_search_first_instruction_qualification_arrow {
   position: absolute;
-  left: -179px;
+  left: -185px;
   top: -78px;
 }
 
@@ -1353,7 +1364,6 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
-  box-shadow: 0px 3px 12px #E1E8FF;
   border-radius: 14px;
   display: none;
   margin-top: 20px;
@@ -2222,6 +2232,11 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   background: #E1E8FF;
 }
+@media (max-width: 992px) {
+  .box_birds_search_application_item_size {
+    margin-right: 24px;
+  }
+}
 
 .box_birds_search_application_item_status {
   width: 210px;
@@ -2796,6 +2811,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 992px) {
   .box_birds_search_account_transactions_main_wrapper_item {
     width: 100%;
+    box-shadow: none;
   }
 }
 
@@ -2812,6 +2828,7 @@ input::-webkit-inner-spin-button {
     background: #F9F9FF;
     box-shadow: 0px 3px 10px 0px #E1E8FF;
     padding: 5px 15px 15px 15px;
+    margin-top: 10px;
   }
 }
 
@@ -2908,9 +2925,20 @@ input::-webkit-inner-spin-button {
   color: #818895;
   font-size: 14px;
   font-weight: 500;
-  display: flex;
   align-items: center;
   margin-top: 10px;
+  display: none;
+}
+.box_birds_search_account_transactions_content_min_amount.desc {
+  display: flex;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_min_amount {
+    display: flex;
+  }
+  .box_birds_search_account_transactions_content_min_amount.desc {
+    display: none;
+  }
 }
 .box_birds_search_account_transactions_content_min_amount span {
   width: 18px;
@@ -2920,6 +2948,20 @@ input::-webkit-inner-spin-button {
   align-items: center;
   border-radius: 3px;
   margin-left: 14px;
+}
+
+.small-text_mobile {
+  display: none;
+  margin-top: 30px;
+  color: #818895;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (max-width: 992px) {
+  .small-text_mobile {
+    display: block;
+  }
 }
 
 .box_birds_search_account_transactions_content_btn {
@@ -2937,6 +2979,11 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   margin-top: 15px;
 }
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_btn {
+    margin-top: 60px;
+  }
+}
 .box_birds_search_account_transactions_content_btn:hover {
   transition-duration: 0.5s;
   background-color: #1B4CFB;
@@ -2949,6 +2996,11 @@ input::-webkit-inner-spin-button {
   font-weight: 500;
   line-height: 150%;
   margin-top: 8px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_small_txt {
+    display: none;
+  }
 }
 
 .box_birds_search_account_transactions_main_wrapper {
@@ -2974,6 +3026,8 @@ input::-webkit-inner-spin-button {
 @media (max-width: 992px) {
   .box_birds_search_account_transactions_balance1 {
     width: 100%;
+    height: auto;
+    padding-bottom: 70px;
   }
 }
 .box_birds_search_account_transactions_balance1.active {
@@ -2981,20 +3035,44 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 992px) {
   .box_birds_search_account_transactions_balance1 {
-    margin: 20px auto 0 auto;
+    margin: 30px 30px 0 30px;
   }
+}
+
+.balance-history_change {
+  margin-top: 30px;
+  padding: 0 42px;
+  display: none;
+}
+@media (max-width: 992px) {
+  .balance-history_change {
+    display: flex;
+  }
+}
+.balance-history_change div {
+  width: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #96A1C5;
+  text-align: center;
+  padding-bottom: 24px;
+  margin: 0 5px;
+}
+.balance-history_change div.act {
+  border-bottom: 2px solid #1B4CFB;
+  color: #1B4CFB;
 }
 
 .balance-history {
   display: none;
 }
 @media (max-width: 992px) {
-  .balance-history {
+  .balance-history.act {
     display: block;
   }
 }
 .balance-history_title {
-  margin-top: 30px;
+  margin-top: 20px;
   color: #17161B;
   font-size: 16px;
   font-weight: 700;
@@ -3015,6 +3093,8 @@ input::-webkit-inner-spin-button {
 @media (max-width: 992px) {
   .box_birds_search_account_transactions_balance2 {
     width: 100%;
+    height: auto;
+    padding-bottom: 70px;
   }
 }
 .box_birds_search_account_transactions_balance2.active {
@@ -3022,7 +3102,7 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 992px) {
   .box_birds_search_account_transactions_balance2 {
-    margin: 20px auto 0 auto;
+    margin: 30px 30px 0 30px;
   }
 }
 
@@ -3045,11 +3125,29 @@ input::-webkit-inner-spin-button {
   margin-top: 25px;
   margin-bottom: 10px;
 }
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_transportation_amount_title {
+    margin: 0px;
+  }
+}
 
 .box_birds_search_account_transactions_balance_transportation_amount {
   font-size: 24px;
   font-weight: 800;
   color: #17161B;
+  display: block;
+}
+.box_birds_search_account_transactions_balance_transportation_amount.mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_transportation_amount {
+    display: none;
+  }
+  .box_birds_search_account_transactions_balance_transportation_amount.mobile {
+    display: block;
+    margin-top: 11px;
+  }
 }
 
 .box_birds_search_account_transactions_balance_departure_amount_title {
@@ -3059,11 +3157,29 @@ input::-webkit-inner-spin-button {
   margin-top: 55px;
   margin-bottom: 10px;
 }
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_departure_amount_title {
+    margin: 0px;
+  }
+}
 
 .box_birds_search_account_transactions_balance_departure_amount {
   font-size: 24px;
   font-weight: 800;
   color: #17161B;
+  display: block;
+}
+.box_birds_search_account_transactions_balance_departure_amount.mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_departure_amount {
+    display: none;
+  }
+  .box_birds_search_account_transactions_balance_departure_amount.mobile {
+    display: block;
+    margin-top: 45px;
+  }
 }
 
 .box_birds_search_application_tabs_wrap_balance {
@@ -3173,6 +3289,12 @@ input::-webkit-inner-spin-button {
 #tab6 .box_birds_search_application_item_route_box {
   width: 185px;
 }
+@media (max-width: 992px) {
+  #tab6 .box_birds_search_application_title_route,
+  #tab6 .box_birds_search_application_item_route_box {
+    margin-left: 24px;
+  }
+}
 #tab6 .box_birds_search_application_item_departure_icon {
   margin-right: 30px;
   margin-left: -45px;
@@ -3254,6 +3376,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 992px) {
   .box_birds_profile_header_left {
     width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -3294,6 +3417,12 @@ input::-webkit-inner-spin-button {
   background-color: #1B4CFB;
   color: #fff;
 }
+@media (max-width: 992px) {
+  .box_birds_profile_header_left_btn {
+    margin-top: 0px;
+    background-color: #F9F9FF;
+  }
+}
 
 .box_birds_profile_header_right {
   width: 70%;
@@ -3308,6 +3437,11 @@ input::-webkit-inner-spin-button {
 .box_birds_profile_header_right_verification_wrap {
   display: flex;
   align-items: center;
+}
+@media (max-width: 992px) {
+  .box_birds_profile_header_right_verification_wrap {
+    padding-left: 10px;
+  }
 }
 
 .box_birds_profile_header_right_verification_title {
@@ -3502,6 +3636,11 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   color: #17161B;
 }
+@media (max-width: 992px) {
+  .box_birds_profile_header_right_verification_personal_info_title {
+    margin-bottom: 20px;
+  }
+}
 
 .box_birds_profile_header_right_verification_personal_info {
   padding: 29px 15px 20px 15px;
@@ -3522,6 +3661,12 @@ input::-webkit-inner-spin-button {
   }
 }
 
+@media (max-width: 992px) {
+  .box_birds_profile_header_right_verification_personal_info_input_box {
+    margin-top: 16px;
+  }
+}
+
 .box_birds_profile_header_right_verification_personal_info_input {
   width: 290px;
   height: 48px;
@@ -3532,6 +3677,11 @@ input::-webkit-inner-spin-button {
   font-weight: 500;
   color: #17161B;
   margin-top: 10px;
+}
+@media (max-width: 992px) {
+  .box_birds_profile_header_right_verification_personal_info_input {
+    margin-top: 16px;
+  }
 }
 .box_birds_profile_header_right_verification_personal_info_input::placeholder {
   font-size: 16px;
@@ -3553,7 +3703,7 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 992px) {
   .box_birds_profile_header_right_verification_personal_info_input_label_box {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 }
 
@@ -3656,6 +3806,11 @@ input::-webkit-inner-spin-button {
   background: transparent;
   color: #1B4CFB;
   background-color: #F9F9FF;
+}
+@media (max-width: 992px) {
+  .box_birds_profile_header_right_verification_personal_info_save_btn {
+    width: 100%;
+  }
 }
 
 .box_birds_profile_header_left_input__photo_loader {
