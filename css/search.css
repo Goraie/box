@@ -1417,7 +1417,7 @@ input::-webkit-inner-spin-button {
 }
 
 .box_birds_search_first_card_product_box_item_courier_content_box {
-  width: 171px;
+  width: calc(100% - 75px);
   margin-left: 12px;
 }
 
@@ -1452,7 +1452,7 @@ input::-webkit-inner-spin-button {
 
 .box_birds_search_first_card_product_box_item_courier_status {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 9px;
 }
@@ -1479,6 +1479,7 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   line-height: 150%;
   color: #818895;
+  margin-left: 8px;
 }
 
 .box_birds_search_first_card_product_box_item_courier_route_title {
@@ -1616,7 +1617,7 @@ input::-webkit-inner-spin-button {
 }
 
 .box_birds_search_first_card_product_box_item_btn {
-  width: 246px;
+  width: 100%;
   height: 48px;
   font-weight: 700;
   font-size: 16px;
@@ -1657,7 +1658,7 @@ input::-webkit-inner-spin-button {
 }
 
 .box_birds_search_first_card_product_box_item_comments_title_textarea {
-  width: 246px;
+  width: 100%;
   height: 106px;
   background: #EEF2FF;
   border-radius: 12px;
@@ -1677,7 +1678,7 @@ input::-webkit-inner-spin-button {
 }
 
 .box_birds_search_first_card_product_box_item_comments_btn {
-  width: 246px;
+  width: 100%;
   height: 48px;
   font-weight: 700;
   font-size: 16px;
@@ -1810,6 +1811,7 @@ input::-webkit-inner-spin-button {
 }
 .box_birds_search_application_mobile-content_item-center {
   display: flex;
+  justify-content: space-between;
 }
 .box_birds_search_application_mobile-content_item-center .box_birds_search_first_card_product_box_item_courier_route_city {
   font-weight: 500;
