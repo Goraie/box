@@ -1,5 +1,71 @@
 $(document).ready(function () {
 
+  $(".create-application_header-menu__item").click(function () {
+    $(".create-application_header-menu__item").removeClass('act');
+    $(this).addClass('act');
+  });
+
+  $(".create-application_header-menu__item.departure").click(function () {
+    $(".create-application_body.shipping").removeClass('act');
+    $(".create-application_body.departure").addClass('act');
+  });
+
+  $(".create-application_header-menu__item.shipping").click(function () {
+    $(".create-application_body.departure").removeClass('act');
+    $(".create-application_body.shipping").addClass('act');
+  });
+
+  $(".size-list.departure .size").click(function () {
+    $(".size-list.departure .size").removeClass('act');
+    $(this).addClass('act');
+    $(".create-application_body-confirm_size").text($(this).text());
+  });
+
+  $(".size-list.shipping .size").click(function () {
+    let length = $(".size-list.shipping").find('.act').length;
+    if ((length != 2 && !$(this).hasClass('act')) || (length != 1 && $(this).hasClass('act'))) {
+      $(this).toggleClass('act');
+    }
+  });
+
+  $(".create-application_body-confirm_date").text(new Date().toLocaleDateString("en-GB"));
+
+  $('.create-application_body-routes_inputs.departure .from').on('input', function (e) {
+    let val = $(this).val();
+    if (val == '') {
+      $(".create-application_body-confirm_direction.departure .from").text('Откуда');
+      return;
+    }
+    $(".create-application_body-confirm_direction.departure .from").text(val);
+  });
+
+  $('.create-application_body-routes_inputs.departure .to').on('input', function (e) {
+    let val = $(this).val();
+    if (val == '') {
+      $(".create-application_body-confirm_direction.departure .to").text('Куда');
+      return;
+    }
+    $(".create-application_body-confirm_direction.departure .to").text(val);
+  });
+
+  $('.create-application_body-routes_inputs.shipping .from').on('input', function (e) {
+    let val = $(this).val();
+    if (val == '') {
+      $(".create-application_body-confirm_direction.shipping .from").text('Откуда');
+      return;
+    }
+    $(".create-application_body-confirm_direction.shipping .from").text(val);
+  });
+
+  $('.create-application_body-routes_inputs.shipping .to').on('input', function (e) {
+    let val = $(this).val();
+    if (val == '') {
+      $(".create-application_body-confirm_direction.shipping .to").text('Куда');
+      return;
+    }
+    $(".create-application_body-confirm_direction.shipping .to").text(val);
+  });
+
   var x, i, j, l, ll, selElmnt, a, b, c;
   /* Look for any elements with the class "custom-select": */
   x = document.getElementsByClassName("custom-select");
@@ -106,6 +172,46 @@ $(document).ready(function () {
     }
   );
 
+  $(".create-application_body-routes_inputs-date.first").hover(
+    function () {
+      $(".create-application_body-routes_inputs .box_birds_profile_header_prompt.first").addClass('act');
+    }, function () {
+      setTimeout(() => {
+        $(".create-application_body-routes_inputs .box_birds_profile_header_prompt.first").remove();
+      }, 4000);
+    }
+  );
+
+  $(".create-application_body-routes_inputs-date.get").hover(
+    function () {
+      $(".create-application_body-routes_inputs .box_birds_profile_header_prompt.get").addClass('act');
+    }, function () {
+      setTimeout(() => {
+        $(".create-application_body-routes_inputs .box_birds_profile_header_prompt.get").remove();
+      }, 4000);
+    }
+  );
+
+  $(".create-application_body-routes_inputs-date.give").hover(
+    function () {
+      $(".create-application_body-routes_inputs .box_birds_profile_header_prompt.give").addClass('act');
+    }, function () {
+      setTimeout(() => {
+        $(".create-application_body-routes_inputs .box_birds_profile_header_prompt.give").remove();
+      }, 4000);
+    }
+  );
+
+  $(".create-application_body-delivery_top-item.shipping").hover(
+    function () {
+      $(".create-application_body-delivery_top-item.shipping .box_birds_profile_header_prompt").addClass('act');
+    }, function () {
+      setTimeout(() => {
+        $(".create-application_body-delivery_top-item.shipping .box_birds_profile_header_prompt").remove();
+      }, 4000);
+    }
+  );
+
   $("#tab4 .box_birds_search_first_card_product_box_item_courier_heart2").click(function () {
     $(this).parent().parent().parent().parent().fadeOut(500);
     setTimeout(() => {
@@ -134,6 +240,43 @@ $(document).ready(function () {
   $(".box_birds_search_application_mobile-btns_item").click(function () {
     $(this).parent().find('.box_birds_search_application_mobile-btns_item').removeClass('active');
     $(this).addClass('active');
+  });
+
+  $(".box_birds_search_header_box_item_btn").click(function () {
+    $(".create-application").addClass('act');
+    $("body").addClass('disbl');
+  });
+
+  $(".create-application_header-close").click(function () {
+    $(".create-application").removeClass('act');
+    $("body").removeClass('disbl');
+  });
+
+  $(".create-application_body-confirm_btn").click(function () {
+    $(".create-application").removeClass('act');
+    $("body").removeClass('disbl');
+  });
+
+  $(".create-application_body-delivery_bottom-list").slick({
+    arrows: false,
+    slidesToShow: 3.5,
+    infinite: false,
+    dots: false,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 3.5,
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      }
+    ]
   });
 
   $(".tabs_menu-slick").slick({
@@ -218,6 +361,40 @@ $(document).ready(function () {
   });
 
   $(".box_birds_search_first_content_header_form_date").datepicker('update', new Date());
+
+  $(".create-application_body-routes_inputs-date.first").datepicker({
+    format: 'dd.mm.yy',
+    templates: {
+      leftArrow: '<div class="datepicker-prev"> </div>',
+      rightArrow: '<div class="datepicker-next"> </div>'
+    },
+    language: 'ru',
+    autoclose: true
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $(".create-application_body-routes_inputs-date.first").datepicker('hide');
+    });
+  }).on("changeDate", function (event) {
+    $(".create-application_body-confirm_date").text(event.date.toLocaleDateString("en-GB"));
+  });
+
+  $(".create-application_body-routes_inputs-date.first").datepicker('update', new Date());
+
+  $(".create-application_body-routes_inputs-date.shipping").datepicker({
+    format: 'dd.mm.yy',
+    templates: {
+      leftArrow: '<div class="datepicker-prev"> </div>',
+      rightArrow: '<div class="datepicker-next"> </div>'
+    },
+    language: 'ru',
+    autoclose: true
+  }).on("show", function (event) {
+    $("tfoot").on("click", function () {
+      $(".create-application_body-routes_inputs-date.shipping").datepicker('hide');
+    });
+  });
+
+  $(".create-application_body-routes_inputs-date.shipping").datepicker('update', new Date());
 
 
   $(".box_birds_profile_header_right_verification_personal_info_input_date").datepicker({
