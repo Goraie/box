@@ -21,7 +21,6 @@ $(document).ready(function () {
     ]
   });
 
-  setTimeout(() => { $('.create-application_body-delivery_bottom-list').slick('refresh'); }, 2000);
 
   $(".create-application_body-delivery_bottom-list").slick('refresh');
 

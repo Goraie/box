@@ -4247,9 +4247,10 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-left: 20px;
+  margin-right: 20px;
+  min-width: 200px;
 }
-.create-application_body-delivery_bottom .img-item:first-child {
+.create-application_body-delivery_bottom .img-item:last-child {
   margin-left: 0px;
 }
 .create-application_body-delivery_bottom .img-item div {
@@ -4264,6 +4265,7 @@ input::-webkit-inner-spin-button {
 }
 .create-application_body-delivery_bottom .slick-track {
   display: flex;
+  justify-content: center;
 }
 .create-application_body-comment textarea {
   width: 530px;
