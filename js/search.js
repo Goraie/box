@@ -1,5 +1,32 @@
 $(document).ready(function () {
 
+  $(".create-application_body-delivery_bottom-list").slick({
+    arrows: false,
+    infinite: false,
+    dots: false,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 3.5,
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      }
+    ]
+  });
+
+  setTimeout(() => { $('.create-application_body-delivery_bottom-list').slick('refresh'); }, 2000);
+
+  $(".create-application_body-delivery_bottom-list").slick('refresh');
+
+  $(".create-application_body-delivery_bottom-list").trigger('click');
+
   $(".create-application_header-menu__item").click(function () {
     $(".create-application_header-menu__item").removeClass('act');
     $(this).addClass('act');
@@ -242,41 +269,25 @@ $(document).ready(function () {
     $(this).addClass('active');
   });
 
+
+  $(".box_birds_search_header_box_menu_btn").click(function () {
+    $(".application-back").addClass('act');
+    $("body").addClass('disbl');
+  });
+
   $(".box_birds_search_header_box_item_btn").click(function () {
-    $(".create-application").addClass('act');
+    $(".application-back").addClass('act');
     $("body").addClass('disbl');
   });
 
   $(".create-application_header-close").click(function () {
-    $(".create-application").removeClass('act');
+    $(".application-back").removeClass('act');
     $("body").removeClass('disbl');
   });
 
   $(".create-application_body-confirm_btn").click(function () {
-    $(".create-application").removeClass('act');
+    $(".application-back").removeClass('act');
     $("body").removeClass('disbl');
-  });
-
-  $(".create-application_body-delivery_bottom-list").slick({
-    arrows: false,
-    slidesToShow: 3.5,
-    infinite: false,
-    dots: false,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 850,
-        settings: {
-          slidesToShow: 3.5,
-        }
-      },
-      {
-        breakpoint: 300,
-        settings: {
-          slidesToShow: 1.5,
-        }
-      }
-    ]
   });
 
   $(".tabs_menu-slick").slick({
