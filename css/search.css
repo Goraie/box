@@ -3981,6 +3981,11 @@ input::-webkit-inner-spin-button {
   margin-top: 28px;
   display: flex;
 }
+@media (max-width: 850px) {
+  .create-application_header-menu {
+    justify-content: center;
+  }
+}
 .create-application_header-menu__item {
   padding: 0 15px 24px 15px;
   color: #96A1C5;
