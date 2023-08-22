@@ -3993,6 +3993,13 @@ input::-webkit-inner-spin-button {
   font-weight: 600;
   cursor: pointer;
 }
+@media (max-width: 850px) {
+  .create-application_header-menu__item {
+    padding: 0 0 24px 0;
+    width: 40%;
+    text-align: center;
+  }
+}
 .create-application_header-menu__item.act {
   color: #1B4CFB;
   border-bottom: 2px solid #1B4CFB;
@@ -4418,9 +4425,8 @@ input::-webkit-inner-spin-button {
 }
 .create-application_body-confirm::before {
   height: 1px;
-  width: calc(100% + 50px);
+  width: 100%;
   content: "";
-  margin-left: -25px;
   display: block;
   background-color: #B4C0E9;
   margin-bottom: 26px;
