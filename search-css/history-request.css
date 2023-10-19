@@ -1,0 +1,48 @@
+#tab3 .box_birds_search_application_wrap1 .box_birds_search_application_item_status {
+  background-color: #BDD8FD;
+}
+#tab3 .box_birds_search_application_wrap2 .box_birds_search_application_item_status {
+  background-color: #C6E8FA;
+}
+
+.box_birds_search_application_chosen {
+  padding: 24px 0;
+}
+.box_birds_search_application_chosen .box_birds_search_application_title {
+  padding: 0 15px;
+}
+.box_birds_search_application_chosen .box_birds_search_first_card_product_box_item {
+  box-shadow: 0px 0px 12px #E1E8FF;
+  margin-top: 20px;
+}
+.box_birds_search_application_chosen .box_birds_search_first_card_product_box {
+  box-shadow: none;
+  display: flex;
+}
+.box_birds_search_application_chosen .box_birds_search_application_wrap_box {
+  height: auto;
+}
+.box_birds_search_application_chosen .box_birds_search_application_wrap_box.active .box_birds_search_first_card_product_box_item.disbl {
+  display: block;
+}
+.box_birds_search_application_chosen .box_birds_search_application_wrap_box .box_birds_search_first_card_product_box_item.disbl {
+  display: none;
+}
+.box_birds_search_application_chosen .box_birds_search_application_button {
+  width: calc(100% - 30px);
+  margin: auto;
+  margin-top: 37px;
+}
+
+#tab3 .box_birds_search_application_item_status {
+  background-color: #BDD8FD;
+}
+
+.box_birds_search_application_wrap3 {
+  display: none;
+}
+.box_birds_search_application_wrap3.active {
+  display: block;
+}
+
+/*# sourceMappingURL=history-request.css.map */

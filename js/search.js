@@ -313,6 +313,7 @@ $(document).ready(function () {
   $(".box_birds_search_header_box_item_burger").click(function () {
     $(".box_birds_search_header_box.mobile").toggleClass('fixed');
     $(".box_birds_search_header_box_menu").toggleClass('act');
+    $(".tabs_menu").toggleClass('act');
   });
 
   $(".box_birds_search_header_box_menu .tabs_menu li").click(function () {

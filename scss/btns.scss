@@ -1,0 +1,39 @@
+@mixin btn {
+    font-weight: 700;
+    font-size: 16px;
+    color: #F9F9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1B4CFB;
+    border-radius: 10px;
+    border: 1px solid #1B4CFB;
+    transition-duration: .5s;
+    cursor: pointer;
+
+    &:hover {
+        transition-duration: .5s;
+        background: transparent;
+        color: #1B4CFB;
+        background-color: #F9F9FF;
+    }
+}
+
+@mixin btn2 {
+    color: #1B4CFB;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #1B4CFB;
+    transition-duration: .5s;
+    cursor: pointer;
+
+    &:hover {
+        transition-duration: .5s;
+        background-color: #1B4CFB;
+        color: #fff;
+    }
+}

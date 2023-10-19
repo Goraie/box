@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: #f2f4f8;
+
+    &.disbl {
+        overflow-y: hidden;
+    }
+}
+
+* {
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+ul {
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.box_birds_search_content_section {
+    padding: 0 0 100px;
+
+    @media (max-width: 992px) {
+        padding: 0 0 54px;
+    }
+}
+
+.tab {
+    width: calc(80% - 20px);
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+}
+
+#tab2,
+#tab3,
+#tab4,
+#tab5,
+#tab6,
+#tab7,
+#tab8,
+#tab9,
+#tab10,
+#tab11,
+#tab12,
+#tab13,
+#tab14,
+#tab15 {
+    display: none;
+}
+
+.tabs_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 32px;
+
+    @media (max-width: 992px) {
+        margin-top: 0px;
+    }
+}
+
+.footer {
+    &::before {
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+.box_birds_search_application_wrap1 {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.box_birds_search_application_wrap2 {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .box_birds_search_application_item_status {
+        background-color: #D9F5CA;
+
+        &.active {
+            background-color: #eaf5c5;
+        }
+    }
+}
+

@@ -1,0 +1,89 @@
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-main {
+    cursor: pointer;
+
+    padding: 14px 50px 14px 14px;
+    font-size: 15px;
+    color: #17161B;
+    font-weight: 500;
+    transition: all 0.4s ease;
+
+    span {
+        display: none;
+
+        &.act {
+            display: block;
+        }
+    }
+}
+
+.select-items div {
+    &:first-child {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    &:last-child {
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+.select-selected,
+.select-main {
+    background-color: #EDF0F8;
+    border-radius: 10px;
+    position: relative;
+}
+
+.select-selected:after,
+.select-main:after {
+    position: absolute;
+    content: url("../img/select-arrow.svg");
+    right: 10px;
+    top: 12px;
+    transition: all 0.4s ease;
+}
+
+.select-selected.act:after,
+.select-main.act:after {
+    transform: rotate(180deg);
+    transition: all 0.4s ease;
+    top: 5px;
+}
+
+.select-items div,
+.select-selected {
+    cursor: pointer;
+
+    padding: 14px 50px 14px 14px;
+    font-size: 15px;
+    color: #17161B;
+    font-weight: 500;
+    transition: all 0.4s ease;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #EDF0F8;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 10px;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: #E1E8FF;
+    transition: all 0.4s ease;
+}

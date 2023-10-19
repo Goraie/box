@@ -1,0 +1,85 @@
+@import url('./btns.scss');
+
+.box_birds_search_first_application_content_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: #17161B;
+    margin-top: 55px;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.box_birds_search_first_application_box {
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 21px;
+    display: none;
+
+    @media (max-width: 992px) {
+        flex-wrap: wrap;
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+.box_birds_search_first_application_box_item {
+    @media (max-width: 992px) {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    width: 296px;
+    height: 408px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px 0;
+}
+
+.box_birds_search_first_application_box_item1 {
+    background: linear-gradient(0deg, #EEF2FF 38.73%, #EEF2FF 38.73%, rgba(237, 240, 248, 0) 87.74%), url(../img/update.jpg) top center;
+    background-repeat: no-repeat;
+}
+
+.box_birds_search_first_application_box_item2 {
+    background: linear-gradient(0deg, #EEF2FF 38.73%, #EEF2FF 38.73%, rgba(237, 240, 248, 0) 87.74%), url(../img/3d.jpg) top center;
+    background-repeat: no-repeat;
+}
+
+.box_birds_search_first_application_box_item3 {
+    background: linear-gradient(0deg, #EEF2FF 38.73%, #EEF2FF 38.73%, rgba(237, 240, 248, 0) 87.74%), url(../img/window.jpg) top center;
+    background-repeat: no-repeat;
+}
+
+.box_birds_search_first_application_box_item_wrapper {
+    width: 230px;
+}
+
+.box_birds_search_first_application_box_item_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: #17161B;
+}
+
+.box_birds_search_first_application_box_item_txt {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #17161B;
+    margin-top: 12px;
+}
+
+.box_birds_search_first_application_box_item_btn {
+    @include btn;
+    width: 100%;
+    height: 48px;
+    margin-top: 45px;
+}

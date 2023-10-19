@@ -1,0 +1,446 @@
+.box_birds_search_account_transactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.box_birds_search_account_transactions_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 63px;
+  height: auto;
+  border-radius: 14px 14px 0 0;
+  background-color: #F9F9FF;
+  padding: 20px 38px 0 15px;
+  box-shadow: 0 0 12px #E1E8FF;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_header {
+    justify-content: center;
+    width: 100%;
+    padding-right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    margin-bottom: 10px;
+    padding: 20px 15px 0 15px;
+  }
+}
+
+.box_birds_search_account_transactions_header_title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #17161B;
+  margin-top: 9px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_header_title {
+    display: none;
+  }
+}
+
+.box_birds_search_account_transactions_header_btns {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_header_btns {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.box_birds_search_account_transactions_header_btn1 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #96A1C5;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_header_btn1 {
+    width: 140px;
+    margin: 0 10px;
+  }
+}
+.box_birds_search_account_transactions_header_btn1.active {
+  border-bottom: 2px solid #1b4cfb;
+  color: #1B4CFB;
+}
+
+.box_birds_search_account_transactions_header_btn2 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #96A1C5;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_header_btn2 {
+    width: 140px;
+    margin: 0 10px;
+  }
+}
+.box_birds_search_account_transactions_header_btn2.active {
+  border-bottom: 2px solid #1b4cfb;
+  color: #1B4CFB;
+}
+
+.box_birds_search_account_transactions_main_wrapper_item {
+  box-shadow: 0px 3px 12px 0px #E1E8FF;
+  width: calc(70% - 20px);
+  border-radius: 20px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_main_wrapper_item {
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+.box_birds_search_account_transactions_content {
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 15px 15px 15px;
+  border-radius: 0 0 20px 20px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content {
+    width: 100%;
+    border-radius: 21px;
+    background: #F9F9FF;
+    box-shadow: 0px 3px 10px 0px #E1E8FF;
+    padding: 5px 15px 15px 15px;
+    margin-top: 10px;
+  }
+}
+
+.box_birds_search_account_transactions_content_box1 {
+  display: none;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_box1 {
+    flex-wrap: wrap;
+  }
+}
+.box_birds_search_account_transactions_content_box1.active {
+  display: flex;
+}
+
+.box_birds_search_account_transactions_content_box2 {
+  display: none;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_box2 {
+    flex-wrap: wrap;
+  }
+}
+.box_birds_search_account_transactions_content_box2.active {
+  display: flex;
+}
+
+.box_birds_search_account_transactions_content_item {
+  width: 286px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_item {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.box_birds_search_account_transactions_content_item_title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #17161B;
+}
+
+.box_birds_search_account_transactions_content_item_input {
+  width: 100%;
+  height: 48px;
+  background-color: #EDF0F8;
+  color: #17161B;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 20px;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+.box_birds_search_account_transactions_content_item_input::placeholder {
+  color: #17161B;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.box_birds_search_account_transactions_content_item_select_wrapper {
+  position: relative;
+}
+.box_birds_search_account_transactions_content_item_select_wrapper .custom-select {
+  margin-top: 20px;
+}
+
+.box_birds_search_account_transactions_content_item_select {
+  width: 100%;
+  height: 48px;
+  background-color: #EDF0F8;
+  color: #17161B;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 20px;
+  padding-left: 15px;
+  border-radius: 10px;
+  appearance: none;
+  cursor: pointer;
+}
+.box_birds_search_account_transactions_content_item_select option {
+  font-size: 16px;
+  color: #17161B;
+  font-weight: 500;
+}
+
+.box_birds_search_account_transactions_content_min_amount {
+  color: #818895;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  margin-top: 10px;
+  display: none;
+}
+.box_birds_search_account_transactions_content_min_amount.desc {
+  display: flex;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_min_amount {
+    display: flex;
+  }
+  .box_birds_search_account_transactions_content_min_amount.desc {
+    display: none;
+  }
+}
+.box_birds_search_account_transactions_content_min_amount span {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin-left: 14px;
+}
+
+.small-text_mobile {
+  display: none;
+  margin-top: 30px;
+  color: #818895;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (max-width: 992px) {
+  .small-text_mobile {
+    display: block;
+  }
+}
+
+.box_birds_search_account_transactions_content_btn {
+  color: #1B4CFB;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #1B4CFB;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  margin-top: 15px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_btn {
+    margin-top: 60px;
+  }
+}
+.box_birds_search_account_transactions_content_btn:hover {
+  transition-duration: 0.5s;
+  background-color: #1B4CFB;
+  color: #fff;
+}
+
+.box_birds_search_account_transactions_content_small_txt {
+  color: #818895;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 150%;
+  margin-top: 8px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_content_small_txt {
+    display: none;
+  }
+}
+
+.box_birds_search_account_transactions_main_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_main_wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.box_birds_search_account_transactions_balance1 {
+  width: 30%;
+  min-height: 321px;
+  height: auto;
+  border-radius: 14px;
+  background: #F9F9FF;
+  box-shadow: 0px 3px 12px 0px #E1E8FF;
+  padding: 15px;
+  display: none;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance1 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 70px;
+    min-height: auto;
+  }
+}
+.box_birds_search_account_transactions_balance1.active {
+  display: block;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance1 {
+    margin: 30px 30px 0 30px;
+  }
+}
+
+.box_birds_search_application_wrap6 {
+  display: none;
+}
+.box_birds_search_application_wrap6.active {
+  display: block;
+}
+
+.box_birds_search_account_transactions_balance2 {
+  width: 30%;
+  height: 321px;
+  border-radius: 14px;
+  background: #F9F9FF;
+  box-shadow: 0px 3px 12px 0px #E1E8FF;
+  padding: 15px;
+  display: none;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance2 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 70px;
+  }
+}
+.box_birds_search_account_transactions_balance2.active {
+  display: block;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance2 {
+    margin: 30px 30px 0 30px;
+  }
+}
+
+.box_birds_search_account_transactions_balance_title_calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  .box_birds_search_account_transactions_balance_title_calendar {
+    flex-wrap: wrap;
+  }
+}
+
+.box_birds_search_account_transactions_balance_title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #17161B;
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  .box_birds_search_account_transactions_balance_title {
+    width: 100%;
+  }
+}
+
+.box_birds_search_account_transactions_balance_transportation_amount_title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #17161B;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_transportation_amount_title {
+    margin: 0px;
+  }
+}
+
+.box_birds_search_account_transactions_balance_transportation_amount {
+  font-size: 24px;
+  font-weight: 800;
+  color: #17161B;
+  display: block;
+}
+.box_birds_search_account_transactions_balance_transportation_amount.mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_transportation_amount {
+    display: none;
+  }
+  .box_birds_search_account_transactions_balance_transportation_amount.mobile {
+    display: block;
+    margin-top: 11px;
+  }
+}
+
+.box_birds_search_account_transactions_balance_departure_amount_title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #17161B;
+  margin-top: 55px;
+  margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_departure_amount_title {
+    margin: 0px;
+  }
+}
+
+.box_birds_search_account_transactions_balance_departure_amount {
+  font-size: 24px;
+  font-weight: 800;
+  color: #17161B;
+  display: block;
+}
+.box_birds_search_account_transactions_balance_departure_amount.mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .box_birds_search_account_transactions_balance_departure_amount {
+    display: none;
+  }
+  .box_birds_search_account_transactions_balance_departure_amount.mobile {
+    display: block;
+    margin-top: 45px;
+  }
+}
+
+/*# sourceMappingURL=balance.css.map */

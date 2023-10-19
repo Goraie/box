@@ -1,0 +1,35 @@
+.box_birds_search_application_tabs_wrap {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 579px;
+}
+@media (max-width: 1200px) {
+  .box_birds_search_application_tabs_wrap {
+    width: 490px;
+  }
+}
+
+.box_birds_search_application_tabs_btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  width: 245px;
+}
+
+.box_birds_search_application_tabs_btn {
+  height: 43px;
+  color: #96A1C5;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.box_birds_search_application_tabs_btn.active {
+  border-bottom: 2px solid #1B4CFB;
+  color: #1B4CFB;
+}
+
+/*# sourceMappingURL=tabs.css.map */

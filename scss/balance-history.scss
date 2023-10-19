@@ -1,0 +1,131 @@
+.balance-history_change {
+    margin-top: 30px;
+    padding: 0 42px;
+    display: none;
+
+    @media (max-width: 992px) {
+        display: flex;
+    }
+
+    div {
+        width: 50%;
+        font-size: 16px;
+        font-weight: 600;
+        color: #96A1C5;
+        text-align: center;
+        padding-bottom: 24px;
+        margin: 0 5px;
+
+        &.act {
+            border-bottom: 2px solid #1B4CFB;
+            color: #1B4CFB;
+        }
+    }
+}
+
+.balance-history {
+    display: none;
+
+    @media (max-width: 992px) {
+        &.act {
+            display: block;
+        }
+    }
+
+    &_title {
+        margin-top: 20px;
+        color: #17161B;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.box_birds_search_application_tabs_wrap_balance {
+    justify-content: flex-end;
+}
+
+.box_birds_search_application_balance {
+    margin-top: 20px;
+
+    .box_birds_search_application_item_status {
+        background-color: #BDD8FD;
+    }
+
+    .box_birds_search_application_title_date,
+    .box_birds_search_application_item_date {
+        width: 95px;
+    }
+
+    .box_birds_search_application_title_route,
+    .box_birds_search_application_item_route_box {
+        width: 194px;
+    }
+
+    .box_birds_search_application_item_size {
+        margin-right: 55px;
+    }
+}
+
+.box_birds_search_application_title_departure,
+.box_birds_search_application_item_departure,
+.box_birds_search_application_title_shipping {
+    width: 135px;
+    font-size: 12px;
+    font-weight: 500;
+    display: none;
+    position: relative;
+    cursor: pointer;
+
+    &.act {
+        display: block;
+    }
+}
+
+.box_birds_search_application_title_departure {
+    &::after {
+        position: absolute;
+        content: url(../img/select-arrow.svg);
+        right: 20px;
+        top: -3px;
+    }
+}
+
+.box_birds_search_application_title_shipping {
+    &::after {
+        position: absolute;
+        content: url(../img/select-arrow.svg);
+        right: 25px;
+        top: -8px;
+        transform: rotate(180deg);
+    }
+}
+
+#tab6 {
+
+    .box_birds_search_application_title_route,
+    .box_birds_search_application_item_route_box {
+        width: 185px;
+
+        @media (max-width: 992px) {
+            margin-left: 24px;
+        }
+    }
+
+    .box_birds_search_application_item_departure_icon {
+        margin-right: 30px;
+        margin-left: -45px;
+    }
+
+    .box_birds_search_application_title_departure,
+    .box_birds_search_application_item_departure,
+    .box_birds_search_application_title_shipping {
+        width: 155px;
+
+        @media (max-width: 1200px) and (min-width: 992px) {
+            width: 193px;
+        }
+    }
+}
