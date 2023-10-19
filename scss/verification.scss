@@ -1,4 +1,4 @@
-@import url('./btns.scss');
+@import "./btns.scss";
 
 .box_birds_search_verification {
     width: 930px;
@@ -7,7 +7,7 @@
     border: 1px solid #B4C0E9;
     padding: 20px 35px;
     position: relative;
-    background-image: url(../img/verification-bg.png);
+    background-image: url(../img/verification-bg.png); 
     background-repeat: no-repeat;
     background-position: center right;
 

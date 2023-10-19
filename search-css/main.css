@@ -1,11 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-@import url("./btns.scss");
-@import url("./btns.scss");
-@import url("./btns.scss");
-@import url("./btns.scss");
-@import url("./btns.scss");
-@import url("./btns.scss");
 body {
   background-color: #f2f4f8;
 }
@@ -4263,6 +4257,309 @@ input::-webkit-inner-spin-button {
 
 .verification-slick.disbl {
   display: none !important;
+}
+
+.box_birds_search_application_mobile {
+  display: none;
+}
+.box_birds_search_application_mobile-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .box_birds_search_application_mobile {
+    display: block;
+  }
+}
+.box_birds_search_application_mobile-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.box_birds_search_application_mobile-btns_item {
+  color: #96A1C5;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_application_mobile-btns_item {
+    text-align: center;
+    width: 40%;
+  }
+}
+.box_birds_search_application_mobile-btns_item.active {
+  color: #1B4CFB;
+  border-bottom: 2px solid #1B4CFB;
+}
+.box_birds_search_application_mobile-content.disbl {
+  display: none;
+}
+.box_birds_search_application_mobile-content_item {
+  border-radius: 21px;
+  background: #F9F9FF;
+  box-shadow: 0px 3px 10px 0px #E1E8FF;
+  margin-top: 20px;
+  padding: 25px;
+}
+@media (max-width: 768px) {
+  .box_birds_search_application_mobile-content_item {
+    width: 100%;
+  }
+}
+.box_birds_search_application_mobile-content_item.hidden {
+  display: none;
+}
+.box_birds_search_application_mobile-content_item.hidden.act {
+  display: block;
+}
+.box_birds_search_application_mobile-content_item .box_birds_search_first_card_product_box_item_comments_title_textarea,
+.box_birds_search_application_mobile-content_item .box_birds_search_first_card_product_box_item_btn,
+.box_birds_search_application_mobile-content_item .box_birds_search_first_card_product_box_item_comments_btn {
+  width: 100%;
+}
+.box_birds_search_application_mobile-content_item-top {
+  display: flex;
+}
+.box_birds_search_application_mobile-content_item-top_img img {
+  border-radius: 10px;
+  height: 63px;
+}
+.box_birds_search_application_mobile-content_item-top_info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.box_birds_search_application_mobile-content_item-top_info-top {
+  color: #17161B;
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.box_birds_search_application_mobile-content_item-top_info-top .box_birds_search_first_card_product_box_item_courier_heart1,
+.box_birds_search_application_mobile-content_item-top_info-top .box_birds_search_first_card_product_box_item_courier_heart2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.box_birds_search_application_mobile-content_item-top_info-top span {
+  color: #F9F9FF;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 10px;
+  background: #1B4CFB;
+  padding: 2px 5px;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 5px;
+}
+.box_birds_search_application_mobile-content_item-top_info-top span img {
+  margin-right: 3px;
+  margin-top: -1px;
+}
+.box_birds_search_application_mobile-content_item-top_info-bottom {
+  color: #818895;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: auto;
+}
+.box_birds_search_application_mobile-content_item-center {
+  display: flex;
+  justify-content: space-between;
+}
+.box_birds_search_application_mobile-content_item-center .box_birds_search_first_card_product_box_item_courier_route_city {
+  font-weight: 500;
+}
+.box_birds_search_application_mobile-content_item-center .box_birds_search_first_card_product_box_item_courier_parcel_type {
+  margin-top: 15px;
+}
+.box_birds_search_application_mobile-content_item-center .box_birds_search_first_card_product_box_item_courier_route {
+  margin-top: 5px;
+}
+.box_birds_search_application_mobile-content_item-center_right {
+  margin-top: 29px;
+}
+.box_birds_search_application_mobile-content_item-center_right-item {
+  margin-top: 5px;
+}
+.box_birds_search_application_mobile-content_item-center_right-item_title {
+  color: #818895;
+  font-size: 14px;
+  font-weight: 500;
+}
+.box_birds_search_application_mobile-content_item-center_right-item_content {
+  color: #17161B;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 3px;
+}
+.box_birds_search_application_mobile-content_item-bottom .box_birds_search_first_card_product_box_item_courier_price_title {
+  margin-top: 20px;
+}
+.box_birds_search_application_mobile-content_item-bottom .box_birds_search_first_card_product_box_item_courier_price,
+.box_birds_search_application_mobile-content_item-bottom .box_birds_search_application_item_status {
+  margin-top: 5px;
+}
+
+.box_birds_search_application {
+  background: #F9F9FF;
+  box-shadow: 0px 3px 12px #E1E8FF;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+  padding: 24px 15px;
+}
+@media (max-width: 992px) {
+  .box_birds_search_application {
+    display: none;
+  }
+}
+
+.box_birds_search_application_wrap_box {
+  height: auto;
+  overflow: visible;
+}
+.box_birds_search_application_wrap_box.active .box_birds_search_application_item.disbl {
+  display: flex;
+}
+.box_birds_search_application_wrap_box .box_birds_search_application_item.disbl {
+  display: none;
+}
+
+.box_birds_search_application_button {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1B4CFB;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1b4cfb;
+  margin-top: 37px;
+}
+.box_birds_search_application_button:hover {
+  background-color: #1b4cfb;
+  transition-duration: 0.5s;
+  color: #fff;
+}
+
+.btn_text1 {
+  display: none;
+}
+.btn_text1.active {
+  display: block;
+}
+
+.btn_text2 {
+  display: none;
+}
+.btn_text2.active {
+  display: block;
+}
+
+.box_birds_search_application_title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #17161B;
+}
+
+.box_birds_search_application_titles_wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background-color: #EDF0F8;
+  box-shadow: 0px 3px 12px #E1E8FF;
+  border-radius: 10px;
+  margin-top: 29px;
+  padding: 0 21px;
+}
+
+.box_birds_search_application_title_transporter {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  width: 154px;
+}
+
+.box_birds_search_application_title_date {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  width: 80px;
+}
+
+.box_birds_search_application_title_route {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  width: 211px;
+}
+
+.box_birds_search_application_title_size {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  width: 88px;
+}
+
+.box_birds_search_application_title_status {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  width: 224px;
+}
+
+.box_birds_search_application_title_price {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+}
+
+.box_birds_search_application_item_departure_icon {
+  margin-right: 110px;
+  margin-left: 25px;
+}
+
+.box_birds_search_application_item_departure.act {
+  display: block;
+}
+
+.box_birds_search_application_title_departure_icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 26px;
+}
+.box_birds_search_application_title_departure_icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 10px;
+  height: 2px;
+  background-color: #1B4CFB;
+  pointer-events: none;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+}
+.box_birds_search_application_title_departure_icon::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 7px;
+  width: 10px;
+  height: 2px;
+  background-color: #1B4CFB;
+  transform: rotate(-45deg);
 }
 
 /*# sourceMappingURL=main.css.map */
